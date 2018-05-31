@@ -1,0 +1,7 @@
+- Check all the classpaths and variables defined.
+
+- Follow mysqltutorial.org to check all the queries. all sql queries in there, brush up.
+
+- Check symbols ER diagrams, brush up.
+
+- SQL queries from mysqltutorial.org, keyword(Google): mysql classic models
