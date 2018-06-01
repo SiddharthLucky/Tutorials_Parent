@@ -1,0 +1,12 @@
+Write SQL queries for the following problems
+--------------------------------------------
+1. Get all customers who's zip code is '44000'
+2. Get all customer's contact firstname and lastname who's credit limit is more than $1000.
+3. Get all customer's contact firstname and phone who's order due date is today's date
+4. Get all orders where order due date is between the dates '2003-01-01' and '2004-12-01' and zipcode between 90000 and 99999
+5. Get Customer address who got delivered between 2004-01-01 to 2004-06-30
+6. Get all Customer names, orderNumber and total order price who's total order price is greather than 60000, sort them by total order price.
+7. Get  highest purchases customer, employee office code, and totalOrderPrice
+8. Get  each customer's first purchase date , last purchase date in the System.
+9. Get top 3 zip code and totalOrderprice where the highest sales happening for the product 'Motorcycles' in the year 2004;
+10. Get customers contact information who's zip code has only numeric data.
