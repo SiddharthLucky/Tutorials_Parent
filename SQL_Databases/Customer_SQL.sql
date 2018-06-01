@@ -15,18 +15,20 @@ and c.postalCode >= 90000 and c.postalCode <= 99999 and c.customerNumber = o.cus
 SELECT c.customerName, c.addressLine1 from customers c, orders o where c.customerNumber = o.customerNumber and o.shippedDate >= '2004-01-01' and o.shippedDate <= '2004-06-30'; 
 
 #6.
-SELECT c.customerName, c.contactLastName, o.orderNumber, od.quantityOrdered * od.priceEach as 'Total Price' from
+SELECT c.customerName, c.contactLastName, o.orderNumber, od.quantityOrdered * od.priceEach as Total_Price from
 customers c, orders o, orderdetails od where c.customerNumber = o.customerNumber and o.orderNumber = od.orderNumber 
 and od.quantityOrdered * od.priceEach >= 60000 order by od.quantityOrdered * od.priceEach desc; 
 
 #7.
-SELECT c.customerName, e.officeCode, od.quantityOrdered * od.priceEach as 'Total Price' from customers c, employees e, orderdetails od 
-where c.salesRepEmployeeNumber = e.employeeNumber order by od.quantityOrdered * od.priceEach desc limit 1; 
+SELECT c.customerName, e.officeCode, od.quantityOrdered * od.priceEach as 'Total Price' from customers c, employees e, orderdetails od, orders o
+where c.salesRepEmployeeNumber = e.employeeNumber and o.orderNumber = od.orderNumber and o.customerNumber = c.customerNumber order by od.quantityOrdered * od.priceEach desc limit 1; 
 
 #8. Check the query once
-SELECT c.customerName, o1.orderDate, o2.orderdate from customers c, orders o1, orders o2 
-where c.customerNumber = o1.customerNumber and c.customerNumber = o2.customerNumber;
+#SELECT distinct(c.customerName), o1.orderDate, o2.orderdate from customers c, orders o1, orders o2 
+#where c.customerNumber = o1.customerNumber and c.customerNumber = o2.customerNumber;
 
+#8.
+SELECT o.customerNumber, MIN(o.orderDate), MAX(o.orderDate) from orders o group by o.customerNumber;
  
 #9.
 SELECT c.postalCode, od.quantityOrdered * od.priceEach from customers c, orderdetails od, products p, orders o 
