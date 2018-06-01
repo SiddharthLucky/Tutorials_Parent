@@ -8,7 +8,8 @@ SELECT customerName, contactLastName FROM classicmodels.customers where creditLi
 SELECT customerName, phone FROM customers c, orders o where c.customerNumber = o.customerNumber and o.orderDate = CURDATE();
 
 #4.
-SELECT orderNumber from orders where orderDate >= '2003-01-01' and orderDate <= '2004-12-01'; 
+SELECT o.* from orders o, customers c where o.orderDate >= '2003-01-01' and o.orderDate <= '2004-12-01' 
+and c.postalCode >= 90000 and c.postalCode <= 99999 and c.customerNumber = o.customerNumber; 
 
 #5.
 SELECT c.customerName, c.addressLine1 from customers c, orders o where c.customerNumber = o.customerNumber and o.shippedDate >= '2004-01-01' and o.shippedDate <= '2004-06-30'; 
