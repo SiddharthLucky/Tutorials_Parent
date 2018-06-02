@@ -1,0 +1,43 @@
+1. STS - Spring tools Suite = 3.94, you can donwload the suite or you can also install the plugin in eclipse
+
+2. Apache activemq - paste files in a new folder in c drive
+
+3. Apache Maven - paste files in C drive and make a path in environment variables,
+				  mae a variable MAVEN_HOME to the maven root folder and in path make a
+				  %MAVEN_HOME%\bin
+				  
+4. Apache tomcat - paste the files in the C drive and add a path later.
+
+5. Eclipse any editon works
+
+6. fmw - unknown for now
+
+7. git - always been using this.
+
+8. Gradle - Continuous build of application
+
+9. jboss - For managing JSON and XML
+
+10. jdk - installed by default, make sure you have unlimmited security.
+
+11. Jenkins - Continous build, comes only with a var file
+
+12. Lombok - Library unknown as of now.
+
+13. Mongodb - Already used once, make sure you have a cheat sheet at hand.
+
+14. MongoDB Compass - similar to the tensor flow dashboard.
+
+15. Mysql installer - well i would use another database, sql server mostly.
+
+16. MySql workbench - GUI SQL
+
+17. Postman - To make and test REST API.
+
+18. SOAP UI - Soap requests.
+
+19. Spring tool suite - to use SPRING in java, can be either a suite on its own or you can donwload one from eclipse.
+						check the name of the vendor before downloading.
+						
+20. Tortoise GIT - git manager, but id prefer to use bash.
+
