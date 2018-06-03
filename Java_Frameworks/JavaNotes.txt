@@ -1,0 +1,19 @@
+Core JAVA basics notes:
+
+- Instance variables as part of the methods of a class, but mainly to maintain the states of an object.
+
+- Static final makes all the values that are defined with the variable, makes it not be able to reinitialize it again and the value wont be changed
+final keyword the value cant be changed, decalre the final variable un uppercase.
+
+- When an to string method is created that overrides the parent to string, you can directly access the information by sys.out(object name) which generally means
+sys.out(object name.toString()),
+
+- If we do not give a toString() method from above point, if the object is not null the toString will be called automatically. or if the object is null it returns
+an new null reference exception.
+
+- When you find more reusable code, you can use static methods to reduce redundant code.
+
+- All of these static methods can be moved to a util class to keep the code cleaner, the util class
+mainly should contain mostly only static emthods. Kinda to increase reusability.
+
+- Keep in mind the class designs, make them look cleaner.
