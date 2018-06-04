@@ -1,7 +1,5 @@
 package Employee_Initial;
 
-import java.util.Scanner;
-
 public class Employee 
 {
 	private int ein;
@@ -9,7 +7,6 @@ public class Employee
 	private int eSalary;
 	private int eAge;
 	private static String eCompany;
-	private Department dept;
 	public enum Department
 	{
 		SALES(10),

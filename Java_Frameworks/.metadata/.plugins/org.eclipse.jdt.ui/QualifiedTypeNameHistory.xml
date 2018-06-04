@@ -9,4 +9,5 @@
 <fullyQualifiedTypeName name="Employee_Initial.Employee.Department"/>
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeUtil"/>
 <fullyQualifiedTypeName name="Employee_Initial.Employee"/>
+<fullyQualifiedTypeName name="Employee_Initial.EmployeeArrayOperationsImpl"/>
 </qualifiedTypeNameHistroy>
