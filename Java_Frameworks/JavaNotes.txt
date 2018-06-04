@@ -1,5 +1,7 @@
 Core JAVA basics notes:
 
+------------------Session 1--------------
+
 - Instance variables as part of the methods of a class, but mainly to maintain the states of an object.
 
 - Static final makes all the values that are defined with the variable, makes it not be able to reinitialize it again and the value wont be changed
@@ -17,3 +19,25 @@ an new null reference exception.
 mainly should contain mostly only static emthods. Kinda to increase reusability.
 
 - Keep in mind the class designs, make them look cleaner.
+
+- Static decleration will keep onc copy per class.
+
+-------------------Session 2--------------
+
+
+- Once the reference to the object is updated the value will also be updated ie when you
+pass the object as a parameter. Depends on the tye of the variable declared as
+instance is accessable to what.
+
+- Var args can be used when you dont know how many arguments are coming through, args are strings by default.
+indecated by using type and ... dots, example function funcName(String...args)
+
+- Any objects that need to be released or for garbage collecter to collect, you can include all of them in finalize.
+
+- There are times when you want multiple blocks in switch to be executed,
+you may not define a break so that the below block will be executed untill 
+break is encountered.
+
+- 2 variations of for loops, regular, enhanced for loops.
+enhanced for loops - for(decleration: expression)
+

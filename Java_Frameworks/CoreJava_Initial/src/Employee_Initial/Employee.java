@@ -1,5 +1,7 @@
 package Employee_Initial;
 
+import java.util.Scanner;
+
 public class Employee 
 {
 	private int ein;
@@ -7,6 +9,21 @@ public class Employee
 	private int eSalary;
 	private int eAge;
 	private static String eCompany;
+	private Department dept;
+	public enum Department
+	{
+		SALES(10),
+		PURCHASE(20),
+		ADMINISTRATION(30),
+		RESEARCH(40);
+		
+		private int did;
+		
+		Department(int did)
+		{
+			this.did=did;
+		}
+	}
 	
 	public int getEin() 
 	{
@@ -31,7 +48,7 @@ public class Employee
 	}
 	public void seteAge(int eAge) 
 	{
-		if(geteAge() > 0 && geteAge() <= 120)
+		if(geteAge() >= 0 && geteAge() <= 120)
 		this.eAge = eAge;
 	}
 	
@@ -70,12 +87,22 @@ public class Employee
 		}
 	}
 	
-	public int HRA()
+	public float HRA(float perc)
 	{
-		int Hra, eSalary;
+		float Hra; 
+		int eSalary;
 		eSalary = geteSalary();
-		Hra = ((eSalary * 20) / 100);
+		Hra = ((eSalary * perc) / 100);
 		return Hra;
+	}
+	
+	public float DA(float perc)
+	{
+		int eSalary;
+		float Da;
+		eSalary = geteSalary();
+		Da = ((eSalary * perc) / 100);
+		return Da;
 	}
 	
 	@Override
