@@ -16,6 +16,10 @@ public class EmployeeMain {
 		EmployeeArrayOperationsImpl.emp_delEmp(emp1, Integer.parseInt(args[0]));
 		EmployeeArrayOperationsImpl.emp_displayEmp();
 		
+		// Get employee HRA
+		emp1.HRA(10);
+		
+		
 		// Generally seeks more parameters
 		EmployeeUtil.inc_Salary(1000);
 		
