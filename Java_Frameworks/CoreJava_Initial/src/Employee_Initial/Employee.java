@@ -4,7 +4,7 @@ public class Employee
 {
 	private int ein;
 	private String eName;
-	private int eSalary;
+	private int eSalary; // When you dont need multiple allocations use static and final. Memory purposes
 	private int eAge;
 	private static String eCompany;
 	public enum Department
@@ -84,7 +84,7 @@ public class Employee
 		}
 	}
 	
-	public float HRA(float perc)
+	public float HRA(float perc) // Functions names are not supposed to be in Capital names
 	{
 		float Hra; 
 		int eSalary;

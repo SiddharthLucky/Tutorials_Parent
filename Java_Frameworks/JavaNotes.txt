@@ -20,7 +20,7 @@ mainly should contain mostly only static emthods. Kinda to increase reusability.
 
 - Keep in mind the class designs, make them look cleaner.
 
-- Static decleration will keep onc copy per class.
+- Static decleration will keep one copy per class, example only 1 employee then the methods should be static.
 
 -------------------Session 2--------------
 
