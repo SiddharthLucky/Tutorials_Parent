@@ -43,7 +43,12 @@ public class EmployeeArrayMain
 					empArrMain = empArrayobj.addEmp(ein1, ename1, esalary1, eage1);
 					break;
 
-			case 2: // Delete function
+			case 2: int ein2;
+					System.out.println("Enter employee ID to delete: ");
+					Scanner uinfo2 = new Scanner(System.in);
+					ein2 = uinfo2.nextInt();
+					empArrMain = empArrayobj.deleteEmployee(ein2);
+					
 					break;
 
 			case 3: int ein3, esalary3, eage3;
@@ -63,12 +68,12 @@ public class EmployeeArrayMain
 					empArrMain = empArrayobj.updateEmp(ein3, ename3, esalary3, eage3);
 					break;
 
-			case 4: int tempidHolder;
+			case 4: int tempidHolder4;
 					System.out.println("Enter the EmployeeID to search for: ");
 					Scanner uid = new Scanner(System.in);
-					tempidHolder = uid.nextInt();
+					tempidHolder4 = uid.nextInt();
 					Employee foundID;
-					foundID = empArrayobj.dispEmpID(tempidHolder);
+					foundID = empArrayobj.dispEmpID(tempidHolder4);
 					System.out.println("Found: "+ foundID+"\n");
 					break;
 
@@ -79,26 +84,34 @@ public class EmployeeArrayMain
 					}
 					break;
 
-			case 6: // HRA by id
+			case 6: int tempidHolder6 = 0;
+					float hra;
+					System.out.println("Enter the Employees ID for his/her HRA");
+					Scanner uid6 = new Scanner(System.in);
+					tempidHolder6 = uid6.nextInt();
+					hra = empArrayobj.getHRAbyID(empArrMain, tempidHolder6);
+					System.out.println("The Employee with ID: "+tempidHolder6+" has HRA of: "+hra);
 					break;
 
-			case 7: // GROSS income by ID
+			case 7: int tempHolder7 = 0;
+					float grossSalary;
+					System.out.println("Enter the Employees ID for his/her Gross Salary");
+					Scanner uid7 = new Scanner(System.in);
+					tempHolder7 = uid7.nextInt();
+					grossSalary = empArrayobj.grossSalaryByID(empArrMain, tempHolder7);
+					System.out.println("The Employee with ID: "+tempHolder7+" has a Gross Salary of: "+grossSalary);
 					break;
 
 			default:
 				System.out.println("Selected an invalid option, Please select another\n");
 
-			}
-			
+			}	
 		}
-		
-		
 	}
 	
 	public static int displayMenu()
 	{
 		int temp;
-		System.out.println("Enter the number of Employees you will be working with:");
 		System.out.println("1. ADD:");
 		System.out.println("2. DELETE:");
 		System.out.println("3. UPDATE:");

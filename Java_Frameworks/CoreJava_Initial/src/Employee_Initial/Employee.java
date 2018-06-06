@@ -84,6 +84,15 @@ public class Employee
 		}
 	}
 	
+	public float HRA() // Functions names are not supposed to be in Capital names
+	{
+		float Hra; 
+		int eSalary;
+		eSalary = geteSalary();
+		Hra = ((eSalary * 20) / 100);
+		return Hra;
+	}
+	
 	public float HRA(float perc) // Functions names are not supposed to be in Capital names
 	{
 		float Hra; 

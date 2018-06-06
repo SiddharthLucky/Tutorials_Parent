@@ -73,7 +73,7 @@ public class EmployeeUtil {
 		}
 	}
 
-	public static void emp_grossSalary(Employee emp) {
+	public static float emp_grossSalary(Employee emp) {
 		float emp_baseSalary, da, hra, perc, grossEarning;
 		int emp_Age = emp.geteAge();
 		emp_baseSalary = emp.geteSalary();
@@ -83,27 +83,32 @@ public class EmployeeUtil {
 			hra = emp.HRA(8);
 			da = emp.DA(15);
 			grossEarning = (emp_baseSalary + hra + da);
-			System.out.println("Gross income of Employee " + emp.getEin() + " is: " + grossEarning);
+			//System.out.println("Gross income of Employee " + emp.getEin() + " is: " + grossEarning);
+			return grossEarning;
 		} else if (emp_baseSalary < 20000) {
 			hra = emp.HRA(10);
 			da = emp.DA(20);
 			grossEarning = (emp_baseSalary + hra + da);
-			System.out.println("Gross income of Employee " + emp.getEin() + " is: " + grossEarning);
+			//System.out.println("Gross income of Employee " + emp.getEin() + " is: " + grossEarning);
+			return grossEarning;
 		} else if (emp_baseSalary < 30000 && emp_Age >= 40) {
 			hra = emp.HRA(15);
 			da = emp.DA(27);
 			grossEarning = (emp_baseSalary + hra + da);
-			System.out.println("Gross income of Employee " + emp.getEin() + " is: " + grossEarning);
+			//System.out.println("Gross income of Employee " + emp.getEin() + " is: " + grossEarning);
+			return grossEarning;
 		} else if (emp_baseSalary < 30000 && emp_Age < 40) {
 			hra = emp.HRA(13);
 			da = emp.DA(25);
 			grossEarning = (emp_baseSalary + hra + da);
-			System.out.println("Gross income of Employee " + emp.getEin() + " is: " + grossEarning);
+			//System.out.println("Gross income of Employee " + emp.getEin() + " is: " + grossEarning);
+			return grossEarning;
 		} else {
 			hra = emp.HRA(17);
 			da = emp.DA(30);
 			grossEarning = (emp_baseSalary + hra + da);
-			System.out.println("Gross income of Employee " + emp.getEin() + " is: " + grossEarning);
+			//System.out.println("Gross income of Employee " + emp.getEin() + " is: " + grossEarning);
+			return grossEarning;
 		}
 	}
 
