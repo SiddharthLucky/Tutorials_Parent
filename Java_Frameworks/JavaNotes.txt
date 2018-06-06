@@ -22,6 +22,10 @@ mainly should contain mostly only static emthods. Kinda to increase reusability.
 
 - Static decleration will keep one copy per class, example only 1 employee then the methods should be static.
 
+- You can create constructor from source, generate constructor on fields in class.
+
+- fir salary conmapre you can use terenary operator - example directly
+return emp.getsal() > emp2.getsal() ? emp1|emp2
 -------------------Session 2--------------
 
 

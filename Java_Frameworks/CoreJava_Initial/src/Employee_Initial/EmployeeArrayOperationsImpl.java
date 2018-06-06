@@ -2,70 +2,103 @@ package Employee_Initial;
 
 public class EmployeeArrayOperationsImpl 
 {
-	static String[] empInfo_Table = new String[5];
-	public static void emp_addEmp(Employee emp, int index)
+
+		// Make it mistakes protected
+		// Don't make this static
+		// Don't keep any scanners or Sysout,a s they should be implemented by the main class
+		// Just initialize the array, the constructor will provide the size from the user taken from the main
+	public Employee[] empArr;
+
+	public EmployeeArrayOperationsImpl(int empArrsize) 
 	{
-		empInfo_Table[index] = "ein: "+emp.getEin()+"ename: "+emp.geteName();
-		System.out.println("Information saved: "+empInfo_Table[index]);
-	}
-	public static void emp_delEmp(Employee emp, int index)
-	{
-		empInfo_Table[index] = "NULL";
-		System.out.println("Information Deleted");
-	}
-	public static void emp_updEmp(Employee emp, int index)
-	{
-		empInfo_Table[index] = "ein: "+emp.getEin()+" ename: "+emp.geteName();
-		System.out.println("Information updated/saved: "+empInfo_Table[index]);
-	}
-	public static void emp_displayEmp()
-	{
-		for(int i = 0; i < empInfo_Table.length; i++)
-		{
-			System.out.println("Employee Information: " +empInfo_Table[i]);
-		}
+		empArr = new Employee[empArrsize];
+		dispEmp();
 	}
 	
-	public static void emp_grossSalary(Employee emp)
+	public int getnextEmptyIndex(Employee[] tempArr)
 	{
-		float emp_baseSalary, da, hra, perc, grossEarning;
-		int emp_Age = emp.geteAge();
-		emp_baseSalary = emp.geteSalary();
-		
-		if(emp_baseSalary < 10000)
+		int emptyval = 0;
+		boolean flag = false;
+		for(int i = 0; i < tempArr.length; i++)
 		{
-			hra = emp.HRA(8);
-			da = emp.DA(15);
-			grossEarning = (emp_baseSalary + hra + da);
-			System.out.println("Gross income of Employee "+emp.getEin()+" is: "+grossEarning);
+			if(tempArr[i] == null && flag == false)
+			{
+				emptyval = i;
+				flag = true;
+			}
 		}
-		else if(emp_baseSalary < 20000)
-		{
-			hra = emp.HRA(10);
-			da = emp.DA(20);
-			grossEarning = (emp_baseSalary + hra + da);
-			System.out.println("Gross income of Employee "+emp.getEin()+" is: "+grossEarning);
-		}
-		else if(emp_baseSalary < 30000 && emp_Age >= 40)
-		{
-			hra = emp.HRA(15);
-			da = emp.DA(27);
-			grossEarning = (emp_baseSalary + hra + da);
-			System.out.println("Gross income of Employee "+emp.getEin()+" is: "+grossEarning);
-		}
-		else if(emp_baseSalary < 30000 && emp_Age < 40)
-		{
-			hra = emp.HRA(13);
-			da = emp.DA(25);
-			grossEarning = (emp_baseSalary + hra + da);
-			System.out.println("Gross income of Employee "+emp.getEin()+" is: "+grossEarning);
-		}
-		else
-		{
-			hra = emp.HRA(17);
-			da = emp.DA(30);
-			grossEarning = (emp_baseSalary + hra + da);
-			System.out.println("Gross income of Employee "+emp.getEin()+" is: "+grossEarning);
-		}
+		return emptyval;
 	}
+	
+	// Method to add employees
+		public Employee[] addEmp(int empID, String empName, int empSalary, int empAge)
+		{
+			int empEinTemp, empSalaryTemp, empTempAge;
+			int indexHolder = getnextEmptyIndex(empArr);
+			String empNameTemp;
+			Employee emp;
+			
+			empEinTemp = empID;
+			empSalaryTemp = empSalary;
+			empTempAge = empAge;
+			empNameTemp = empName;
+			emp = EmployeeUtil.init_Employee(empEinTemp, empNameTemp, empSalaryTemp, empTempAge);
+			empArr[indexHolder] = emp;
+			
+			return empArr;
+		}
+		
+	// Method to update the array values
+		public Employee[] updateEmp(int empid, String eName, int empsalary, int eage)
+		{
+			//Isolating the enployee obj with relevant information
+			Employee tempEmpHolder = null;
+			boolean flag = true;
+			for(int i = 0; i < empArr.length; i++)
+			{
+				if(empArr[i] != null)
+				{
+					tempEmpHolder = empArr[i];
+				}
+				if(tempEmpHolder.getEin() == empid && flag == true)
+				{
+					tempEmpHolder = EmployeeUtil.init_Employee(empid, eName, empsalary, eage);
+					empArr[i] = tempEmpHolder;
+					flag = false;
+				}
+			}
+			return empArr;
+		}
+		
+	// Method to display employee by ID
+		public Employee dispEmpID(int empID)
+		{
+			Employee tempObjHolder = null;
+			boolean flag = false;
+			for(int i = 0; i < empArr.length; i++)
+			{
+				if(empArr[i] != null)
+				{
+					tempObjHolder = empArr[i];
+				}
+				if(tempObjHolder.getEin() == empID && flag == false)
+				{
+					tempObjHolder = empArr[i];
+					flag = true;
+				}
+			}
+			return tempObjHolder;
+		}
+		
+	// Method to display all the employees
+		public Employee[] dispEmp()
+		{
+			Employee[] tempArrHolder = new Employee[empArr.length];
+			for(int i = 0; i < empArr.length; i++)
+			{
+				tempArrHolder[i] = empArr[i];
+			}
+			return tempArrHolder;
+		}
+	
 }
