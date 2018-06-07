@@ -12,7 +12,6 @@ public class EmployeeArrayOperationsImpl
 	public EmployeeArrayOperationsImpl(int empArrsize) 
 	{
 		empArr = new Employee[empArrsize];
-		dispEmp();
 	}
 	
 	private int getnextEmptyIndex()
@@ -27,6 +26,9 @@ public class EmployeeArrayOperationsImpl
 				flag = true;
 			}
 		}
+		if(emptyval == empArr.length)
+			System.out.println("Maximum limit reached");
+		
 		return emptyval;
 	}
 	
@@ -71,20 +73,19 @@ public class EmployeeArrayOperationsImpl
 		}
 		
 	// Method to display employee by ID
-		public Employee dispEmpID(int empID)
+		public Employee dispEmpID(Employee[] tempArrHolder, int empID)
 		{
 			Employee tempObjHolder = null;
 			boolean flag = false;
-			for(int i = 0; i < empArr.length; i++)
+			for(int i = 0; i < tempArrHolder.length; i++)
 			{
-				if(empArr[i] != null)
+				if(tempArrHolder[i] != null && flag == false)
 				{
-					tempObjHolder = empArr[i];
+					tempObjHolder = tempArrHolder[i];
 				}
 				if(tempObjHolder.getEin() == empID && flag == false)
 				{
-					tempObjHolder = empArr[i];
-					System.out.println("display by id"+tempObjHolder);
+					tempObjHolder = tempArrHolder[i];
 					flag = true;
 				}
 			}
@@ -92,15 +93,16 @@ public class EmployeeArrayOperationsImpl
 		}
 		
 	// Method to display all the employees
-		public Employee[] dispEmp()
+		public Employee[] dispEmp(Employee[] tempArrHolder)
 		{
-			Employee[] tempArrHolder = new Employee[empArr.length];
-			for(int i = 0; i < empArr.length; i++)
+			Employee tempval;
+			for(int i = 0; i < tempArrHolder.length; i++)
 			{
-				//if(empArr[i] != null)
-				//{
-					tempArrHolder[i] = empArr[i];
-				//}
+				if(tempArrHolder[i] != null)
+				{
+					tempval = tempArrHolder[i];
+					tempArrHolder[i] = tempval;
+				}
 			}
 			return tempArrHolder;
 		}
@@ -127,18 +129,12 @@ public class EmployeeArrayOperationsImpl
 				}
 			}
 			tempArrHolder = adjArray(tempArrHolder, indexHolder);
-			System.out.println("got array: "+ tempArrHolder[0]);
-			System.out.println("got array: "+ tempArrHolder[1]);
-			System.out.println("got array: "+ tempArrHolder[2]);
-			System.out.println("got array: "+ tempArrHolder[3]);
-			System.out.println("got array: "+ tempArrHolder[4]);
 			return tempArrHolder;
 		}
 		
 		private Employee[] adjArray(Employee[] tempArrHolder, int tempindHolder)
 		{
 			Employee tempHolder2 = null;
-			boolean flag = false;
 			for(int i = 0; i < tempArrHolder.length; i++)
 			{
 				for(int j = i + 1; j < tempArrHolder.length; j++)
@@ -170,6 +166,7 @@ public class EmployeeArrayOperationsImpl
 					hra = tempObjHolder.HRA();
 					flag = false;
 				}
+				
 			}
 			return hra;
 		}

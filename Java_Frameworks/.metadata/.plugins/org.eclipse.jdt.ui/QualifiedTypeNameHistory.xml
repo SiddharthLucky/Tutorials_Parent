@@ -6,9 +6,10 @@
 <fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSeparatorUI"/>
 <fullyQualifiedTypeName name="Employee_Initial.Employee.Department"/>
 <fullyQualifiedTypeName name="java.awt.DisplayMode"/>
-<fullyQualifiedTypeName name="Employee_Initial.EmployeeArrayOperationsImpl"/>
-<fullyQualifiedTypeName name="Employee_Initial.Employee"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+<fullyQualifiedTypeName name="Employee_Initial.Employee"/>
+<fullyQualifiedTypeName name="Employee_Initial.EmployeeArrayOperationsImpl"/>
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeUtil"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>

@@ -1,6 +1,5 @@
 package Employee_Initial;
 
-import java.awt.DisplayMode;
 import java.util.Scanner;
 
 public class EmployeeArrayMain 
@@ -15,10 +14,6 @@ public class EmployeeArrayMain
 		System.out.println("Enter the number of Employees you will be working with:");
 		empc = new Scanner(System.in);
 		totEmp = empc.nextInt();
-		
-		Employee emp1 = new Employee();
-		
-		//emp2 = EmployeeUtil.init_Employee(2, "Sam", 56789, 25);
 		
 		EmployeeArrayOperationsImpl empArrayobj = new EmployeeArrayOperationsImpl(totEmp);
 		
@@ -41,6 +36,7 @@ public class EmployeeArrayMain
 					eage1 = uinfo1.nextInt();
 					
 					empArrMain = empArrayobj.addEmp(ein1, ename1, esalary1, eage1);
+					System.out.println("Employee information added.\n");
 					break;
 
 			case 2: int ein2;
@@ -48,6 +44,7 @@ public class EmployeeArrayMain
 					Scanner uinfo2 = new Scanner(System.in);
 					ein2 = uinfo2.nextInt();
 					empArrMain = empArrayobj.deleteEmployee(ein2);
+					System.out.println("Employee information deleted.\n");
 					
 					break;
 
@@ -56,7 +53,7 @@ public class EmployeeArrayMain
 					Employee tempHolder3;
 					Scanner uinfo3 = new Scanner(System.in);
 					Scanner uname3 = new Scanner(System.in);
-					System.out.println("Enter the EmployeeID whose information youd update: ");
+					System.out.println("\nEnter the EmployeeID whose information youd update: ");
 					ein3 = uinfo3.nextInt();
 					System.out.println("Enter Employees Name: ");
 					ename3 = uname3.next();
@@ -66,31 +63,35 @@ public class EmployeeArrayMain
 					eage3 = uinfo3.nextInt();
 					
 					empArrMain = empArrayobj.updateEmp(ein3, ename3, esalary3, eage3);
+					System.out.println("Employee Information Updated.\n");
 					break;
 
 			case 4: int tempidHolder4;
-					System.out.println("Enter the EmployeeID to search for: ");
+					System.out.println("\nEnter the EmployeeID to search for: ");
 					Scanner uid = new Scanner(System.in);
 					tempidHolder4 = uid.nextInt();
 					Employee foundID;
-					foundID = empArrayobj.dispEmpID(tempidHolder4);
-					System.out.println("Found: "+ foundID+"\n");
+					foundID = empArrayobj.dispEmpID(empArrMain,tempidHolder4);
+					System.out.println("\nFound: "+ foundID+"\n");
 					break;
 
-			case 5: empArrMain = empArrayobj.dispEmp();
+			case 5: empArrMain = empArrayobj.dispEmp(empArrMain);
 					for(int i = 0; i < empArrMain.length; i++)
 					{
-						System.out.println("info: "+empArrMain[i]);
+						if(empArrMain[i] != null)
+						{
+							System.out.println(empArrMain[i]);
+						}
 					}
 					break;
 
 			case 6: int tempidHolder6 = 0;
 					float hra;
-					System.out.println("Enter the Employees ID for his/her HRA");
+					System.out.println("\nEnter the Employees ID for his/her HRA");
 					Scanner uid6 = new Scanner(System.in);
 					tempidHolder6 = uid6.nextInt();
 					hra = empArrayobj.getHRAbyID(empArrMain, tempidHolder6);
-					System.out.println("The Employee with ID: "+tempidHolder6+" has HRA of: "+hra);
+					System.out.println("The Employee with ID: "+tempidHolder6+" has HRA of: "+hra+"\n");
 					break;
 
 			case 7: int tempHolder7 = 0;
@@ -99,7 +100,7 @@ public class EmployeeArrayMain
 					Scanner uid7 = new Scanner(System.in);
 					tempHolder7 = uid7.nextInt();
 					grossSalary = empArrayobj.grossSalaryByID(empArrMain, tempHolder7);
-					System.out.println("The Employee with ID: "+tempHolder7+" has a Gross Salary of: "+grossSalary);
+					System.out.println("The Employee with ID: "+tempHolder7+" has a Gross Salary of: "+grossSalary+"\n");
 					break;
 
 			default:
@@ -112,6 +113,7 @@ public class EmployeeArrayMain
 	public static int displayMenu()
 	{
 		int temp;
+		System.out.println("\nEnter your option: ");
 		System.out.println("1. ADD:");
 		System.out.println("2. DELETE:");
 		System.out.println("3. UPDATE:");
