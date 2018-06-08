@@ -1,5 +1,7 @@
 package Employee_Initial;
 
+// You can set the methods static when there are no instance variables created.
+// 
 public class EmployeeUtil {
 	public static Employee init_Employee(int ein, String eName, int eSalary, int eAge) {
 		Employee emp = new Employee();

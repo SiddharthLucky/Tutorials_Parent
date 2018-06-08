@@ -10,6 +10,6 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="Employee_Initial.Employee"/>
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeArrayOperationsImpl"/>
-<fullyQualifiedTypeName name="Employee_Initial.EmployeeUtil"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="Employee_Initial.EmployeeUtil"/>
 </qualifiedTypeNameHistroy>
