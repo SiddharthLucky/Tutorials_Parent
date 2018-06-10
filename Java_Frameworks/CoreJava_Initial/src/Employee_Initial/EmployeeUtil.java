@@ -1,8 +1,50 @@
 package Employee_Initial;
 
+import java.util.Scanner;
+
 // You can set the methods static when there are no instance variables created.
 // 
+
+//Method to get users input for all functions
+
 public class EmployeeUtil {
+	
+	Employee emp;
+	
+	public static int getArrSize()
+	{
+		int totEmp;
+		// Look at the code carefully, you dont have to declare an array
+		//Employee[] empArrMain = null;
+		System.out.println("Enter the number of Employees you will be working with:");
+		Scanner empc = new Scanner(System.in);
+		totEmp = empc.nextInt();
+
+		return totEmp;
+		//EmployeeArray empArrObj = new EmployeeArray(totEmp);
+	}
+	
+	public static Employee collectInfo()
+	{
+		int ein, esalary, eage;
+		String ename;
+		Scanner uinfo = new Scanner(System.in);
+		Scanner uname = new Scanner(System.in);
+		System.out.println("Enter the Employee information:");
+		System.out.println("Enter Employees ID: ");
+		ein = uinfo.nextInt();
+		System.out.println("Enter Employees Name: ");
+		ename = uname.next();
+		System.out.println("Enter Employees Salary: ");
+		esalary = uinfo.nextInt();
+		System.out.println("Enter Employees Age: ");
+		eage = uinfo.nextInt();
+		Employee emp;
+		emp = EmployeeUtil.init_Employee(ein, ename, esalary, eage);
+		return emp;
+	}
+	
+	
 	public static Employee init_Employee(int ein, String eName, int eSalary, int eAge) {
 		Employee emp = new Employee();
 		emp.setEin(ein);

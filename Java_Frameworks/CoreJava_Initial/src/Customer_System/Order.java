@@ -12,7 +12,6 @@ public class Order
 	private String otherMessage;
 	
 	
-	
 	public Order(int orderid)
 	{
 		this.orderID = orderid;
