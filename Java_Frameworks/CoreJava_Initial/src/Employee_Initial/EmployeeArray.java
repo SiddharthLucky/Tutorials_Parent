@@ -83,20 +83,18 @@ public class EmployeeArray
 		}
 		
 		// Method to update the array values
-		public void updateEmp(Employee emp, int empid) {
+		public void updateEmp(int empid, Employee emp) {
 			// Isolating the employee obj with relevant information
-			Employee[] tempArrHolder = getEmpArr(); 
+			Employee[] tempArrHolder = getEmpArr();
+			Employee tempHolder = null;
 			boolean flag = true;
-			int count = 0;
 			for (int i = 0; i < tempArrHolder.length; i++) {
-				/*if (tempArrHolder[i] != null) {
-					emp = tempArrHolder[i];
-				}*/
+				if (tempArrHolder[i] != null) {
+					tempHolder = tempArrHolder[i];
+				}
 				System.out.println("ein: "+emp.getEin()+"empid: "+empid);
-				if (emp.getEin() == empid && flag == true) {
+				if (tempHolder.getEin() == empid && flag == true) {
 					tempArrHolder[i] = emp;
-					System.out.println(tempArrHolder[i]);
-					System.out.println("Entered: "+count);
 					flag = false;
 				}
 			}

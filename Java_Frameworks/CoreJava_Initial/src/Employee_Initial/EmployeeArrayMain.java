@@ -32,15 +32,11 @@ public class EmployeeArrayMain {
 
 			case 3:
 				int ein3;
-				
+				System.out.println("Enter employee ID to updated: ");
 				Scanner uinfo3 = new Scanner(System.in);
-			
-				System.out.println("\nEnter the EmployeeID whose information youd update: ");
 				ein3 = uinfo3.nextInt();
-				
-				emp = EmployeeUtil.collectInfo();
-			
-				empArrayobj.updateEmp(emp, ein3);
+				Employee updEmpInfo = EmployeeUtil.collectInfo_Update(ein3);
+				empArrayobj.updateEmp(ein3, updEmpInfo);
 				System.out.println("Employee Information Updated.\n");
 				break;
 
