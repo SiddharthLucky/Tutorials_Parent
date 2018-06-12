@@ -92,7 +92,6 @@ public class EmployeeArray
 				if (tempArrHolder[i] != null) {
 					tempHolder = tempArrHolder[i];
 				}
-				System.out.println("ein: "+emp.getEin()+"empid: "+empid);
 				if (tempHolder.getEin() == empid && flag == true) {
 					tempArrHolder[i] = emp;
 					flag = false;

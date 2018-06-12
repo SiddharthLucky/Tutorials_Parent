@@ -60,5 +60,7 @@ public class Customer
 		return orders;
 	}
 	
-
+// For making some fields optional you can check the builder design patterns
+// The builder class can be made static so that i can access it anywhere and if it is a method you cannot
+	//access it untill the classes object is built.
 }

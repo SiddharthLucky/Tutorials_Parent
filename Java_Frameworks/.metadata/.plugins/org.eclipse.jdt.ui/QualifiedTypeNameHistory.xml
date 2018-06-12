@@ -17,4 +17,6 @@
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeServices"/>
 <fullyQualifiedTypeName name="Customer_System.OrderProducts"/>
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeUtil"/>
+<fullyQualifiedTypeName name="Associations.RectangleAbs"/>
+<fullyQualifiedTypeName name="Associations.ShapeAbs"/>
 </qualifiedTypeNameHistroy>

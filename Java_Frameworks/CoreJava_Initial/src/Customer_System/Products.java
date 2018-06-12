@@ -6,7 +6,7 @@ public class Products
 	private String productName;
 	private String productDescription;
 	private float productprice;
-	private OrderProducts[] orderProd;
+	
 	
 	public int getProductID() {
 		return productID;

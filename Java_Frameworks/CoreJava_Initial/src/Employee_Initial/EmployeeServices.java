@@ -38,6 +38,7 @@ public class EmployeeServices {
 			}
 
 		}
+		// You can also choose to directly send the above equation in a return statement.
 		return hra;
 	}
 
