@@ -73,4 +73,13 @@ return the array always as there should only be one copy in the util class that 
 - Check when you need aggregation or composition - as times you need that u need 2 seperate objects or fi you have to make the 2 object depended on
 the first object, for making the two objects dependant, you can initlaize the second object in the constructor of the first object.
 
-- More than 2 levels of inhertice can cause testing problems.
+- More than 2 levels of inhertice can cause testing problems. For most multilevel problems it generally goes with a "is a" than a "has a" relation
+
+
+
+------------------- Session 4---------------
+
+- If you are planning on making a string synchronized - only 1 thread is allowd to access it. For this use string builder as it can allow acces to multiple threads.
+
+- Make sure u dont make the string builder as an instance variable so that only one variable gets initialized and all the threads have to wait for the single object
+to be released.

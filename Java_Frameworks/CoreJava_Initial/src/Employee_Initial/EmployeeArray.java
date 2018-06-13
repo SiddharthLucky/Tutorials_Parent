@@ -1,6 +1,6 @@
 package Employee_Initial;
 
-public class EmployeeArray 
+public class EmployeeArray implements EmployeeArrayInterface 
 {
 	private Employee[] empArr;
 
@@ -17,6 +17,7 @@ public class EmployeeArray
 	}
 
 	// Method to display all the employees
+		@Override
 		public Employee[] dispEmp() {
 			Employee[] tempArrHolder = getEmpArr();
 			Employee tempval;
@@ -31,6 +32,7 @@ public class EmployeeArray
 		}
 		
 		// Method to display employee by ID
+		@Override
 		public Employee dispEmpID(int empID) {
 			Employee tempObjHolder = null;
 			Employee[] tempArrHolder = getEmpArr();
@@ -48,6 +50,7 @@ public class EmployeeArray
 		}
 		
 		// Method to delete an employee and adjust the array
+		@Override
 		public void deleteEmployee(int empid) {
 			Employee[] tempArrHolder;
 			tempArrHolder = getEmpArr();
@@ -67,7 +70,7 @@ public class EmployeeArray
 			tempArrHolder = adjArray(tempArrHolder, indexHolder);
 			setEmpArr(tempArrHolder);
 		}
-
+		
 		private Employee[] adjArray(Employee[] tempArrHolder, int tempindHolder) {
 			Employee tempHolder2 = null;
 			for (int i = 0; i < tempArrHolder.length; i++) {
@@ -83,6 +86,7 @@ public class EmployeeArray
 		}
 		
 		// Method to update the array values
+		@Override
 		public void updateEmp(int empid, Employee emp) {
 			// Isolating the employee obj with relevant information
 			Employee[] tempArrHolder = getEmpArr();
@@ -117,6 +121,7 @@ public class EmployeeArray
 		}
 
 		// Method to add employees
+		@Override
 		public void addEmp(Employee emp) {
 			Employee[] tempArrHolder = getEmpArr();
 			int indexHolder = getnextEmptyIndex();

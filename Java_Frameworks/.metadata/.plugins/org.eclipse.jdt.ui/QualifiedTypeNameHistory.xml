@@ -9,8 +9,6 @@
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
 <fullyQualifiedTypeName name="Employee_Initial.Employee"/>
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeArrayOperationsImpl"/>
-<fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="Customer_System.Customer"/>
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeArray"/>
@@ -19,4 +17,18 @@
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeUtil"/>
 <fullyQualifiedTypeName name="Associations.RectangleAbs"/>
 <fullyQualifiedTypeName name="Associations.ShapeAbs"/>
+<fullyQualifiedTypeName name="Employee_Initial.EmployeeArrayInterface"/>
+<fullyQualifiedTypeName name="java.lang.Override"/>
+<fullyQualifiedTypeName name="lombok.Data"/>
+<fullyQualifiedTypeName name="lombok.Getter"/>
+<fullyQualifiedTypeName name="lombok.Setter"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+<fullyQualifiedTypeName name="Payment.PaymentInterfaceImpl"/>
+<fullyQualifiedTypeName name="Payment.SaleRequest"/>
+<fullyQualifiedTypeName name="Payment.VoidRequest"/>
+<fullyQualifiedTypeName name="Payment.AuthRequest"/>
+<fullyQualifiedTypeName name="Payment.IncrementAuthorizationRequest"/>
+<fullyQualifiedTypeName name="Payment.PaymentInterface"/>
+<fullyQualifiedTypeName name="Payment.BasePaymentInterface"/>
 </qualifiedTypeNameHistroy>
