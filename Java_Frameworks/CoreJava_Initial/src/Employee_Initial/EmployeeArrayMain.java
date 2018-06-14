@@ -1,22 +1,29 @@
 package Employee_Initial;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class EmployeeArrayMain {
 
-	private static Scanner empc;
-
 	public static void main(String[] args) {
-		int uopt;
-		Employee emp;
-		EmployeeArray empArrayobj = new EmployeeArray(EmployeeUtil.getArrSize());
-		EmployeeServices servicesObj = new EmployeeServices(empArrayobj);
+		int uopt = 0;
+		//Always use the interface on the decelration side and the class implents it on the right
+		EmployeeServicesInterface empArrayobj = new EmployeeServices();
 		while (true) {
-			uopt = displayMenu();
+			try 
+			{
+				uopt = displayMenu();
+			}
+			catch (InputMismatchException|NullPointerException e)
+			{
+				System.out.println("Enter a valid numerical value.");
+				//e.printStackTrace();
+				uopt = displayMenu();
+			}
+			
 			switch (uopt) {
 			case 1:
-				emp = EmployeeUtil.collectInfo();
-				empArrayobj.addEmp(emp);
+				empArrayobj.addEmployee();
 				System.out.println("Employee information added.\n");
 				break;
 
@@ -35,8 +42,7 @@ public class EmployeeArrayMain {
 				System.out.println("Enter employee ID to updated: ");
 				Scanner uinfo3 = new Scanner(System.in);
 				ein3 = uinfo3.nextInt();
-				Employee updEmpInfo = EmployeeUtil.collectInfo_Update(ein3);
-				empArrayobj.updateEmp(ein3, updEmpInfo);
+				empArrayobj.updateEmployee(ein3);
 				System.out.println("Employee Information Updated.\n");
 				break;
 
@@ -46,12 +52,12 @@ public class EmployeeArrayMain {
 				Scanner uid = new Scanner(System.in);
 				tempidHolder4 = uid.nextInt();
 				Employee foundID;
-				foundID = empArrayobj.dispEmpID(tempidHolder4);
+				foundID = empArrayobj.dispEmployeeID(tempidHolder4);
 				System.out.println("\nFound: " + foundID + "\n");
 				break;
 
 			case 5:
-				Employee[] empArrMain = empArrayobj.dispEmp();
+				Employee[] empArrMain = empArrayobj.dispEmployee();
 				for (int i = 0; i < empArrMain.length; i++) {
 					if (empArrMain[i] != null) {
 						System.out.println(empArrMain[i]);
@@ -65,7 +71,7 @@ public class EmployeeArrayMain {
 				System.out.println("\nEnter the Employees ID for his/her HRA");
 				Scanner uid6 = new Scanner(System.in);
 				tempidHolder6 = uid6.nextInt();
-				hra = servicesObj.getHRAbyID(tempidHolder6);
+				hra = empArrayobj.getHRAbyID(tempidHolder6);
 				System.out.println("The Employee with ID: " + tempidHolder6 + " has HRA of: " + hra + "\n");
 				break;
 
@@ -75,7 +81,7 @@ public class EmployeeArrayMain {
 				System.out.println("Enter the Employees ID for his/her Gross Salary");
 				Scanner uid7 = new Scanner(System.in);
 				tempHolder7 = uid7.nextInt();
-				grossSalary = servicesObj.grossSalaryByID(tempHolder7);
+				grossSalary = empArrayobj.grossSalaryByID(tempHolder7);
 				System.out.println(
 						"The Employee with ID: " + tempHolder7 + " has a Gross Salary of: " + grossSalary + "\n");
 				break;
@@ -87,7 +93,7 @@ public class EmployeeArrayMain {
 		}
 	}
 
-	public static int displayMenu() {
+	public static int displayMenu() throws InputMismatchException, NullPointerException{
 		int temp;
 		System.out.println("\nEnter your option: ");
 		System.out.println("1. ADD:");
@@ -100,6 +106,8 @@ public class EmployeeArrayMain {
 		System.out.println("Select your option:");
 		Scanner uoption = new Scanner(System.in);
 		temp = uoption.nextInt();
-		return temp;
+		
+		throw new InputMismatchException();
+		//return temp;
 	}
 }

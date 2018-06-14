@@ -1,5 +1,6 @@
 package Employee_Initial;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 // You can set the methods static when there are no instance variables created.
@@ -7,21 +8,26 @@ import java.util.Scanner;
 
 //Method to get users input for all functions
 
-public class EmployeeUtil {
+public class EmployeeUtil{
 	
 	Employee emp;
 	
-	public static int getArrSize()
-	{
-		int totEmp;
-		// Look at the code carefully, you dont have to declare an array
-		//Employee[] empArrMain = null;
-		System.out.println("Enter the number of Employees you will be working with:");
-		Scanner empc = new Scanner(System.in);
-		totEmp = empc.nextInt();
+	public static int getArrSize() {
+		int totEmp = 0;
+		try {
+			
+			// Look at the code carefully, you dont have to declare an array
 
+			System.out.println("Enter the number of Employees you will be working with:");
+			Scanner empc = new Scanner(System.in);
+			totEmp = empc.nextInt();
+			
+		} catch (InputMismatchException|NullPointerException e) 
+		{
+			System.out.println("Enter a valid number of employees you will be workign with.");
+			getArrSize();
+		}
 		return totEmp;
-		//EmployeeArray empArrObj = new EmployeeArray(totEmp);
 	}
 	
 	public static Employee collectInfo()
@@ -44,7 +50,7 @@ public class EmployeeUtil {
 		return emp;
 	}
 	
-	public static Employee collectInfo_Update(int ein)
+	public static Employee collectInfo_Update(int ein) throws customExceptions
 	{
 		int esalary, eage;
 		String ename;
@@ -52,9 +58,13 @@ public class EmployeeUtil {
 		Scanner uname = new Scanner(System.in);
 		System.out.println("Enter the Employee information:");
 		System.out.println("Enter Employees Name: ");
-		ename = uname.next();
+		ename = uname.next(); 
 		System.out.println("Enter Employees Salary: ");
 		esalary = uinfo.nextInt();
+		if (esalary <= 5000) 
+		{
+			throw new customExceptions("Enter a Salary valye greater than 5000");
+		}	
 		System.out.println("Enter Employees Age: ");
 		eage = uinfo.nextInt();
 		Employee emp;
@@ -198,3 +208,5 @@ public class EmployeeUtil {
 		}
 	}
 }
+
+

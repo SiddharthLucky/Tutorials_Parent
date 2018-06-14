@@ -6,11 +6,13 @@ public class PaymentApp {
 
 	public static void main(String[] args) 
 	{
-		PaymentInterfaceImpl paymentimpl = new PaymentInterfaceImpl();
+		// Always use the interface variable referencing to the class that implements them
+		PaymentInterface paymentimpl = new PaymentInterfaceImpl();
 		SaleRequest val1 = null;
 		VoidRequest val2 = null;
 		AuthRequest val3 = null;
 		IncrementAuthorizationRequest val4 = null;
+		PaymentInterface newimpl = new Shift4PaymentInterfaceImpl();
 		
 		int finalval = 0;
 		while (true) 

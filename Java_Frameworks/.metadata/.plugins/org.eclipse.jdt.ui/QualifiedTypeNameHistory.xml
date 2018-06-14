@@ -7,14 +7,10 @@
 <fullyQualifiedTypeName name="Employee_Initial.Employee.Department"/>
 <fullyQualifiedTypeName name="java.awt.DisplayMode"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="Employee_Initial.Employee"/>
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeArrayOperationsImpl"/>
 <fullyQualifiedTypeName name="java.sql.Date"/>
 <fullyQualifiedTypeName name="Customer_System.Customer"/>
-<fullyQualifiedTypeName name="Employee_Initial.EmployeeArray"/>
-<fullyQualifiedTypeName name="Employee_Initial.EmployeeServices"/>
 <fullyQualifiedTypeName name="Customer_System.OrderProducts"/>
-<fullyQualifiedTypeName name="Employee_Initial.EmployeeUtil"/>
 <fullyQualifiedTypeName name="Associations.RectangleAbs"/>
 <fullyQualifiedTypeName name="Associations.ShapeAbs"/>
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeArrayInterface"/>
@@ -31,4 +27,14 @@
 <fullyQualifiedTypeName name="Payment.IncrementAuthorizationRequest"/>
 <fullyQualifiedTypeName name="Payment.PaymentInterface"/>
 <fullyQualifiedTypeName name="Payment.BasePaymentInterface"/>
+<fullyQualifiedTypeName name="Payment.Shift4PaymentInterfaceImpl"/>
+<fullyQualifiedTypeName name="Employee_Initial.EmployeeArray"/>
+<fullyQualifiedTypeName name="Employee_Initial.EmployeeServices"/>
+<fullyQualifiedTypeName name="Employee_Initial.Employee"/>
+<fullyQualifiedTypeName name="Employee_Initial.EmployeeUtil"/>
+<fullyQualifiedTypeName name="java.lang.NullPointerException"/>
+<fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+<fullyQualifiedTypeName name="java.lang.Exception"/>
+<fullyQualifiedTypeName name="Employee_Initial.customExceptions.lessThanBaseSalary"/>
+<fullyQualifiedTypeName name="Employee_Initial.customExceptions"/>
 </qualifiedTypeNameHistroy>
