@@ -1,5 +1,10 @@
 package Employee_Initial;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+
 public class EmployeeArray implements EmployeeArrayInterface 
 {
 	private Employee[] empArr;
@@ -12,8 +17,46 @@ public class EmployeeArray implements EmployeeArrayInterface
 		this.empArr = empArr;
 	}
 
+	//Default constructor initializes the array value
 	public EmployeeArray(int empArrsize) {
 		empArr = new Employee[empArrsize];
+	}
+	
+	//Constructor is called when a file is passed as a parameter
+	public void readFromFile() throws Exception
+	{
+		Employee[] tempArrHolder = getEmpArr();
+		String filePath = EmployeeUtil.getFilePath();
+		String line = "";
+		String splitBy = ", ";
+		
+		try 
+		{
+			BufferedReader breader = new BufferedReader(new FileReader(filePath));
+			int i = 0;
+			Employee emp;
+			while((line = breader.readLine()) != null)
+			{
+				String[] tempvalues = line.split(splitBy);
+				emp = EmployeeUtil.init_Employee(Integer.parseInt(tempvalues[0]), tempvalues[1], Integer.parseInt(tempvalues[2]), Integer.parseInt(tempvalues[3]));
+				tempArrHolder[i] = emp;
+				i++;
+			}
+			System.out.println("Retrieved data from file.");
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+		
+		setEmpArr(tempArrHolder);
+	}
+	
+	private Employee parseLine(String line)
+	{
+		String[] tokens = line.split(",");
+		Employee emp = EmployeeUtil.init_Employee(Integer.parseInt(tokens[0]), tokens[1], Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]));
+		return emp;
 	}
 
 	// Method to display all the employees

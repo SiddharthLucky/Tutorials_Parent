@@ -1,5 +1,6 @@
 package Employee_Initial;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -7,7 +8,7 @@ public class EmployeeArrayMain {
 
 	public static void main(String[] args) {
 		int uopt = 0;
-		//Always use the interface on the decelration side and the class implents it on the right
+		//Always use the interface on the deceleration side and the class implements it on the right
 		EmployeeServicesInterface empArrayobj = new EmployeeServices();
 		while (true) {
 			try 
@@ -17,14 +18,21 @@ public class EmployeeArrayMain {
 			catch (InputMismatchException|NullPointerException e)
 			{
 				System.out.println("Enter a valid numerical value.");
-				//e.printStackTrace();
 				uopt = displayMenu();
 			}
 			
 			switch (uopt) {
 			case 1:
-				empArrayobj.addEmployee();
-				System.out.println("Employee information added.\n");
+				try 
+				{
+					empArrayobj.addEmployee();
+					System.out.println("Employee information added.\n");
+				}
+				catch (customExceptions e)
+				{
+					System.out.println(e.toString());
+					System.out.println("Please re enter the values:");
+				}
 				break;
 
 			case 2:
@@ -42,8 +50,16 @@ public class EmployeeArrayMain {
 				System.out.println("Enter employee ID to updated: ");
 				Scanner uinfo3 = new Scanner(System.in);
 				ein3 = uinfo3.nextInt();
-				empArrayobj.updateEmployee(ein3);
-				System.out.println("Employee Information Updated.\n");
+				try 
+				{
+					empArrayobj.updateEmployee(ein3);
+					System.out.println("Employee Information Updated.\n");
+				}
+				catch(customExceptions e)
+				{
+					System.out.println(e.toString());
+					System.out.println("Please re enter the values.");
+				}
 				break;
 
 			case 4:
@@ -85,6 +101,21 @@ public class EmployeeArrayMain {
 				System.out.println(
 						"The Employee with ID: " + tempHolder7 + " has a Gross Salary of: " + grossSalary + "\n");
 				break;
+				
+				
+			case 8:
+				empArrayobj.saveToFile();
+				System.out.println("File Saved in: "+EmployeeUtil.getFilePath());
+				break;
+			//case 8:
+				/*try {
+					empArrayobj.employeeSerialize();
+				} catch (IOException e) {			
+					e.printStackTrace();
+					System.out.println("Operation failed, could not be written.");
+				}
+				System.out.println("Exiting Code.");*/
+				//break;
 
 			default:
 				System.out.println("Selected an invalid option, Please select another\n");
@@ -93,7 +124,7 @@ public class EmployeeArrayMain {
 		}
 	}
 
-	public static int displayMenu() throws InputMismatchException, NullPointerException{
+	public static int displayMenu(){
 		int temp;
 		System.out.println("\nEnter your option: ");
 		System.out.println("1. ADD:");
@@ -102,12 +133,13 @@ public class EmployeeArrayMain {
 		System.out.println("4. DISPLAY BY ID:");
 		System.out.println("5. DISPLAY ALL:");
 		System.out.println("6. HRA BY ID:");
-		System.out.println("7. GROSS INCOME BY ID:\n");
+		System.out.println("7. GROSS INCOME BY ID:");
+		System.out.println("8. EXIT SAVING CHANGES:\n");
 		System.out.println("Select your option:");
 		Scanner uoption = new Scanner(System.in);
 		temp = uoption.nextInt();
+		return temp;
+		//throw new InputMismatchException();
 		
-		throw new InputMismatchException();
-		//return temp;
 	}
 }

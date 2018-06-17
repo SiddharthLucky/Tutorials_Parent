@@ -1,7 +1,19 @@
 package Employee_Initial;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.io.OutputStreamWriter;
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
+import javax.swing.JFileChooser;
 
 // You can set the methods static when there are no instance variables created.
 // 
@@ -24,13 +36,13 @@ public class EmployeeUtil{
 			
 		} catch (InputMismatchException|NullPointerException e) 
 		{
-			System.out.println("Enter a valid number of employees you will be workign with.");
+			System.out.println("Enter a valid number of employees you will be working with.\n");
 			getArrSize();
 		}
 		return totEmp;
 	}
 	
-	public static Employee collectInfo()
+	public static Employee collectInfo() throws customExceptions
 	{
 		int ein, esalary, eage;
 		String ename;
@@ -43,6 +55,10 @@ public class EmployeeUtil{
 		ename = uname.next();
 		System.out.println("Enter Employees Salary: ");
 		esalary = uinfo.nextInt();
+		if(esalary <= 5000)
+		{
+			throw new customExceptions("The employees salary has to be more than 5000");
+		}
 		System.out.println("Enter Employees Age: ");
 		eage = uinfo.nextInt();
 		Employee emp;
@@ -206,6 +222,41 @@ public class EmployeeUtil{
 			System.out.println("Select a valid number\n");
 			break;
 		}
+		
+	}
+	
+	public static String getFilePath()
+	{
+		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\EmployeeData.csv";
+		return filePath;
+	}
+	
+	public static File initfileFromUser()
+	{
+		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\EmployeeData.csv";
+		File file = new File(filePath);
+		if(!file.exists())
+		{
+			System.out.println("The designated file doesnt exist.");
+			System.out.println("New file is being created");
+			try {
+				file.createNewFile();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		return file;
+	}
+	
+	public static boolean checkFileExists(String filePath)
+	{
+		boolean exists = false;
+		File file = new File(filePath);
+		if(file.exists())
+		{
+			exists = true;
+		}
+		return exists;
 	}
 }
 

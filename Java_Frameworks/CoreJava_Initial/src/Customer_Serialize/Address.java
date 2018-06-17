@@ -1,19 +1,19 @@
-package Customer_System;
+package Customer_Serialize;
 
 public class Address 
 {
-	private final String dispOnCheck;
-	private final String billStreet;
-	private final String billCity;
-	private final String billState;
-	private final String billZip;
-	private final String billCountry;
-	private final String shipStreet;
-	private final String shipCity;
-	private final String shipState;
-	private final String shipZip;
-	private final String shipCountry;
-	private final String addressDetails;
+	private transient final String dispOnCheck;
+	private transient final String billStreet;
+	private transient final String billCity;
+	private transient final String billState;
+	private transient final String billZip;
+	private transient final String billCountry;
+	private transient final String shipStreet;
+	private transient final String shipCity;
+	private transient final String shipState;
+	private transient final String shipZip;
+	private transient final String shipCountry;
+	private transient final String addressDetails;
 	
 	public Address(String dispOnCheck, String billStreet, String billCity, String billState, String billZip,
 			String billCountry, String shipStreet, String shipCity, String shipState, String shipZip,
