@@ -1,6 +1,5 @@
 package Employee_Initial;
 
-import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -107,15 +106,6 @@ public class EmployeeArrayMain {
 				empArrayobj.saveToFile();
 				System.out.println("File Saved in: "+EmployeeUtil.getFilePath());
 				break;
-			//case 8:
-				/*try {
-					empArrayobj.employeeSerialize();
-				} catch (IOException e) {			
-					e.printStackTrace();
-					System.out.println("Operation failed, could not be written.");
-				}
-				System.out.println("Exiting Code.");*/
-				//break;
 
 			default:
 				System.out.println("Selected an invalid option, Please select another\n");

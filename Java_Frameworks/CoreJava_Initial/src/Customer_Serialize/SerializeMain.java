@@ -21,7 +21,6 @@ public class SerializeMain
 		try {
 			Customer tempHolder;
 			tempHolder = (Customer)Customer_Serialization.deserializeCustomer();
-			System.out.println(tempHolder);
 		}
 		catch(ClassNotFoundException|IOException e)
 		{

@@ -10,8 +10,5 @@ public interface EmployeeServicesInterface{
 	public Employee[] dispEmployee();//throws customExceptions;throws customExceptions;
 	public float getHRAbyID(int empid);//throws customExceptions;throws customExceptions;
 	public float grossSalaryByID(int empid);//throws customExceptions;throws customExceptions;
-	//public void readFromFile() throws Exception;
 	public void saveToFile();
-	/*public void employeeSerialize() throws IOException;
-	public Employee[] employeeDeSerialize() throws IOException, ClassNotFoundException; */
 }

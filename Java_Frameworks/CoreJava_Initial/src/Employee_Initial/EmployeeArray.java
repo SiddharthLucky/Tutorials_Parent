@@ -1,18 +1,16 @@
 package Employee_Initial;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.Reader;
+import java.io.*;
 
 public class EmployeeArray implements EmployeeArrayInterface 
 {
 	private Employee[] empArr;
 
-	 public Employee[] getEmpArr() {
+	public Employee[] getEmpArr() {
 		return empArr;
 	}
 
+	@Override
 	public void setEmpArr(Employee[] empArr) {
 		this.empArr = empArr;
 	}
@@ -23,6 +21,7 @@ public class EmployeeArray implements EmployeeArrayInterface
 	}
 	
 	//Constructor is called when a file is passed as a parameter
+	@Override
 	public void readFromFile() throws Exception
 	{
 		Employee[] tempArrHolder = getEmpArr();
@@ -171,5 +170,38 @@ public class EmployeeArray implements EmployeeArrayInterface
 
 			tempArrHolder[indexHolder] = emp;
 			setEmpArr(tempArrHolder);
+		}
+		
+		//COnnect this method to read from the file in the constructor		
+		@Override
+		public void saveToFile()
+		{
+			Employee[] tempArrHolder = getEmpArr();
+			Employee emp;
+			File file = EmployeeUtil.initfileFromUser();
+			if(file.exists())
+			{
+				try
+				{
+					BufferedWriter buffWrite = new BufferedWriter(new FileWriter(file));
+					String empContainer;
+					for(int i = 0; i < tempArrHolder.length; i++)
+					{
+						if(tempArrHolder[i] != null)
+						{
+							emp = tempArrHolder[i];
+							empContainer = ""+emp.getEin()+", "+emp.geteName()+", "+ emp.geteSalary()+", "+emp.geteAge()+", "+emp.geteAge()+", "+emp.geteCompany();
+							buffWrite.write(empContainer);
+							buffWrite.newLine();
+						}
+					}
+					buffWrite.flush();
+					buffWrite.close();
+				}
+				catch(Exception e)
+				{
+					e.printStackTrace();
+				}
+			}
 		}
 }

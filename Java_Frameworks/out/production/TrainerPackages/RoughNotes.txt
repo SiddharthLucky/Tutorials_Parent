@@ -1,0 +1,45 @@
+class SingleTonClas {
+	List custList = new ArrayList<Customer>;
+
+	int sum(int x, int y) {
+	
+	}
+	
+	int sum(float y, int... x) {
+	
+	}
+
+	int sum(float[] y, int[] x) {
+	
+	}
+	
+	int max(int x, int y) {
+		int z = x > y ? x : y;
+		
+		x = 30;
+		
+		while (z > 0) {
+			int a = x;
+		}
+		return z;
+	}
+
+	void push(final Customer customer) {
+		//custList.add(customer);
+		customer.setName("Mano");
+	}
+}
+class App {
+	main()  {
+		SingleTonClas s = new SingleTonClas();
+		int x = 15;
+		int y = 30;
+		int z = s.max(x, y);
+		syso(x);
+		
+		Customer customer1 = new Customer(101, "Raj");
+		Customer customer2 = customer1;
+		s.push(customer1);
+		syso(customer1.getName());
+	}
+}
