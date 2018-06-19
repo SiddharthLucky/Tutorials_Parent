@@ -11,4 +11,6 @@ public interface EmployeeArrayCollectionsInterface
 	public void updateEmp(int empid, Employee emp);
 	public void deleteEmployee(int empid);
 	public Employee dispEmpID(int empID);
+	public ArrayList<Employee> getEmpArrList();
+	public void setEmpArrList(ArrayList<Employee> empArrList);
 }

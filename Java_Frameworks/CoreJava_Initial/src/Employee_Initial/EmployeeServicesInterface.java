@@ -1,6 +1,6 @@
 package Employee_Initial;
 
-import java.io.IOException;
+import java.util.ArrayList;
 
 public interface EmployeeServicesInterface{
 	public void addEmployee() throws customExceptions;
@@ -11,4 +11,14 @@ public interface EmployeeServicesInterface{
 	public float getHRAbyID(int empid);//throws customExceptions;throws customExceptions;
 	public float grossSalaryByID(int empid);//throws customExceptions;throws customExceptions;
 	public void saveToFile();
+
+	//Methods for using collections
+	public void addEmployeeCollections() throws customExceptions;
+	public void deleteEmployeeColelctions(int empid);//throws customExceptions;
+	public void updateEmployeeCollections(int empid)throws customExceptions;
+	public Employee dispEmployeeIDCollections(int empid);//throws customExceptions;throws customExceptions;
+	public ArrayList<Employee> dispEmployeeCollections();//throws customExceptions;throws customExceptions;
+	public float getHRAbyIDCollections(int empid);//throws customExceptions;throws customExceptions;
+	public float grossSalaryByIDCollections(int empid);//throws customExceptions;throws customExceptions;
+	public void saveToFileCollections();
 }

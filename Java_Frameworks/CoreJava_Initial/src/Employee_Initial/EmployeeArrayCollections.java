@@ -10,17 +10,17 @@ import java.util.ArrayList;
 
 public class EmployeeArrayCollections implements EmployeeArrayCollectionsInterface
 {
-	private ArrayList<Employee> empArrList = new ArrayList<>();
-	
-	public ArrayList<Employee> getEmpArrList() {
-		return empArrList;
-	}
+	private ArrayList<Employee> empArrList = new ArrayList<>();;
 
-	public void setEmpArrList(ArrayList<Employee> empArrList) {
-		this.empArrList = empArrList;
-	}
-	
-	@Override
+    public ArrayList<Employee> getEmpArrList() {
+        return empArrList;
+    }
+
+    public void setEmpArrList(ArrayList<Employee> empArrList) {
+        this.empArrList = empArrList;
+    }
+
+    @Override
 	public void readFromFile() throws Exception
 	{
 		ArrayList<Employee> tempArrHolder = getEmpArrList();
