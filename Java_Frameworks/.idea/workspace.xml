@@ -3,11 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="7b1de87c-15d2-417b-aecb-db1020b0cbfc" name="Default" comment="Made initialization changes to the file EmployeeArrayCollections.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollections.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollections.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollectionsInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollectionsInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServicesInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServicesInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,7 +35,7 @@
       <file leaf-file-name="EmployeeArrayCollections.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollections.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1599">
+            <state relative-caret-position="136">
               <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
               <folding>
                 <element signature="e#416#417#0" expanded="true" />
@@ -58,22 +59,8 @@
       <file leaf-file-name="EmployeeServices.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1938">
+            <state relative-caret-position="404">
               <caret line="114" selection-start-line="114" selection-end-line="114" />
-              <folding>
-                <element signature="e#979#980#0" expanded="true" />
-                <element signature="e#1017#1018#0" expanded="true" />
-                <element signature="e#1547#1548#0" expanded="true" />
-                <element signature="e#1580#1581#0" expanded="true" />
-                <element signature="e#2697#2698#0" expanded="true" />
-                <element signature="e#2726#2727#0" expanded="true" />
-                <element signature="e#3136#3137#0" expanded="true" />
-                <element signature="e#3194#3195#0" expanded="true" />
-                <element signature="e#3873#3874#0" expanded="true" />
-                <element signature="e#3926#3927#0" expanded="true" />
-                <element signature="e#5012#5013#0" expanded="true" />
-                <element signature="e#5061#5062#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -81,7 +68,7 @@
       <file leaf-file-name="EmployeeServicesInterface.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServicesInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="272">
               <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
             </state>
           </provider>
@@ -127,7 +114,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Java_Frameworks" type="58d84e3e:PackageViewProjectNode" />
+              <item name="CoreJava_Initial" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -150,17 +147,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Java_Frameworks" type="58d84e3e:PackageViewProjectNode" />
-              <item name="CoreJava_Initial" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -182,7 +169,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -278,40 +265,42 @@
       <workItem from="1529388266124" duration="529000" />
       <workItem from="1529390960836" duration="2099000" />
       <workItem from="1529429332224" duration="3158000" />
+      <workItem from="1529528251814" duration="93000" />
+      <workItem from="1529535970059" duration="90000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13847000" />
+    <option name="totallyTimeSpent" value="14030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4986979" weight="0.32965517" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.4518229" side_tool="true" visible="true" weight="0.32965517" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.5970052" weight="0.32965517" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.54817706" weight="0.32965517" />
+      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.5970052" weight="0.32965517" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="1" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49382716" visible="true" weight="0.19661458" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49382716" visible="true" weight="0.19661458" />
       <window_info anchor="right" id="Database" order="6" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986979" weight="0.32965517" />
       <window_info id="Learn" order="2" />
       <window_info anchor="right" x="1253" y="166" width="286" height="245" id="Structure" order="7" sideWeight="0.50617284" side_tool="true" visible="true" weight="0.18619792" />
       <window_info id="UI Designer" order="3" />
-      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986979" weight="0.4" />
+      <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4986979" weight="0.32965517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986979" weight="0.32965517" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,7 +660,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1599">
+        <state relative-caret-position="136">
           <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
           <folding>
             <element signature="e#416#417#0" expanded="true" />
@@ -691,29 +680,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServicesInterface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
+        <state relative-caret-position="272">
           <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
+        <state relative-caret-position="404">
           <caret line="114" selection-start-line="114" selection-end-line="114" />
-          <folding>
-            <element signature="e#979#980#0" expanded="true" />
-            <element signature="e#1017#1018#0" expanded="true" />
-            <element signature="e#1547#1548#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#2697#2698#0" expanded="true" />
-            <element signature="e#2726#2727#0" expanded="true" />
-            <element signature="e#3136#3137#0" expanded="true" />
-            <element signature="e#3194#3195#0" expanded="true" />
-            <element signature="e#3873#3874#0" expanded="true" />
-            <element signature="e#3926#3927#0" expanded="true" />
-            <element signature="e#5012#5013#0" expanded="true" />
-            <element signature="e#5061#5062#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
