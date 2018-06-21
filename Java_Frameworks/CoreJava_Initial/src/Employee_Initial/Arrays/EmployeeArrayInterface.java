@@ -1,6 +1,8 @@
-package Employee_Initial;
+package Employee_Initial.Arrays;
 
-public interface EmployeeArrayInterface 
+import Employee_Initial.Employee;
+
+public interface EmployeeArrayInterface
 {
 	public Employee[] getEmpArr();
 	public void setEmpArr(Employee[] emp);

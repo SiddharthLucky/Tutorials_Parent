@@ -1,6 +1,12 @@
-package Employee_Initial;
+package Employee_Initial.CommonFiles;
 
 //import lombok.Getter;
+
+import Employee_Initial.Arrays.EmployeeArray;
+import Employee_Initial.Arrays.EmployeeArrayInterface;
+import Employee_Initial.Collections.EmployeeArrayCollections;
+import Employee_Initial.Collections.EmployeeArrayCollectionsInterface;
+import Employee_Initial.Employee;
 
 import java.util.ArrayList;
 

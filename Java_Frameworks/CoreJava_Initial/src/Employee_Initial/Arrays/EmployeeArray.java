@@ -1,8 +1,11 @@
-package Employee_Initial;
+package Employee_Initial.Arrays;
+
+import Employee_Initial.Employee;
+import Employee_Initial.CommonFiles.EmployeeUtil;
 
 import java.io.*;
 
-public class EmployeeArray implements EmployeeArrayInterface 
+public class EmployeeArray implements EmployeeArrayInterface
 {
 	private Employee[] empArr;
 

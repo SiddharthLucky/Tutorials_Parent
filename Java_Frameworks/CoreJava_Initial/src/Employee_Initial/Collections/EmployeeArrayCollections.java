@@ -1,16 +1,14 @@
-package Employee_Initial;
+package Employee_Initial.Collections;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
+import Employee_Initial.Employee;
+import Employee_Initial.CommonFiles.EmployeeUtil;
+
+import java.io.*;
 import java.util.ArrayList;
 
 public class EmployeeArrayCollections implements EmployeeArrayCollectionsInterface
 {
-	private ArrayList<Employee> empArrList = new ArrayList<>();;
+	private ArrayList<Employee> empArrList = new ArrayList<>();
 
     public ArrayList<Employee> getEmpArrList() {
         return empArrList;

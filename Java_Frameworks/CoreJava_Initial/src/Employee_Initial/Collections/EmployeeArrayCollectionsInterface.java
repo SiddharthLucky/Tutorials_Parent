@@ -1,4 +1,6 @@
-package Employee_Initial;
+package Employee_Initial.Collections;
+
+import Employee_Initial.Employee;
 
 import java.util.ArrayList;
 

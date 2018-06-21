@@ -1,4 +1,6 @@
-package Employee_Initial;
+package Employee_Initial.CommonFiles;
+
+import Employee_Initial.Employee;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -224,6 +226,13 @@ public class EmployeeUtil{
 		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\EmployeeData.csv";
 		return filePath;
 	}
+
+	//Method to store DB file path
+	public static String getFilePathDB()
+	{
+		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\dbLogin.properties";
+		return filePath;
+	}
 	
 	public static File initfileFromUser()
 	{
@@ -258,10 +267,10 @@ public class EmployeeUtil{
 		return exists;
 	}
 
-	public static void initConnection() throws Exception
+	public static Connection initConnection() throws Exception
 	{
 		Properties props = new Properties();
-		FileInputStream in = new FileInputStream("Employee_Initial/dbLogin.properties");
+		FileInputStream in = new FileInputStream("C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\dbLogin.properties");
 		props.load(in);
 		in.close();
 
@@ -275,6 +284,7 @@ public class EmployeeUtil{
 		String password = props.getProperty("jdbc.password");
 
 		Connection con = DriverManager.getConnection(url, username, password);
+		return con;
 	}
 }
 

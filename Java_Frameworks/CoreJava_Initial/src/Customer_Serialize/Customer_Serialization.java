@@ -1,6 +1,6 @@
 package Customer_Serialize;
 
-import Employee_Initial.EmployeeUtil;
+import Employee_Initial.CommonFiles.EmployeeUtil;
 
 import java.io.File;
 import java.io.FileInputStream;
