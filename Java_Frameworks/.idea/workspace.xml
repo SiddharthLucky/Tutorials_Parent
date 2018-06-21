@@ -2,19 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1de87c-15d2-417b-aecb-db1020b0cbfc" name="Default" comment="Made initialization changes to the file EmployeeArrayCollections.">
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArray.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArrayInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArrayInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArrayMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArrayMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollections.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollections.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollectionsInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollectionsInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeArrayMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArrayMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServicesInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServicesInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeDatabaseInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabaseInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/dbLogin.properties" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/dbLogin.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabase.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabaseInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabaseInterface.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,7 +23,102 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="EmployeeDatabase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4318">
+              <caret line="270" column="179" selection-start-line="270" selection-start-column="179" selection-end-line="270" selection-end-column="179" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeData.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeData.csv">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeServices.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServices.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="59" />
+              <folding>
+                <element signature="e#1422#1423#0" expanded="true" />
+                <element signature="e#1460#1461#0" expanded="true" />
+                <element signature="e#2287#2288#0" expanded="true" />
+                <element signature="e#2320#2321#0" expanded="true" />
+                <element signature="e#5277#5278#0" expanded="true" />
+                <element signature="e#5326#5327#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeArrayCollections.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollections.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeArrayMain.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArrayMain.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="82" column="69" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeServicesInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServicesInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeDatabaseInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabaseInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MasterInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/MasterInterface.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -40,8 +130,14 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>init</find>
       <find>check</find>
+      <find>switch \(uopt\) \{\n\	\	\	case 1\:\n\	\	\	\	try \n\	\	\	\	\{\n\	\	\	\	\	empArrayobj\.addEmployee\(\)\;\n\	\	\	\	\	System\.out\.println\(\&quot;Employee information added\.\\n\&quot;\)\;\n\	\	\	\	\}\n\	\	\	\	catch \(customExceptions e\)\n\	\	\	\	\{\n\	\	\	\	\	System\.out\.println\(e\.toString\(\)\)\;\n\	\	\	\	\	System\.out\.println\(\&quot;Please re enter the values\:\&quot;\)\;\n\	\	\	\	\}\n\	\	\	\	break\;\n\n\	\	\	case 2\:\n\	\	\	\	int ein2\;\n\	\	\	\	System\.out\.println\(\&quot;Enter employee ID to delete\: \&quot;\)\;\n\	\	\	\	Scanner uinfo2 \= new Scanner\(System\.in\)\;\n\	\	\	\	ein2 \= uinfo2\.nextInt\(\)\;\n\	\	\	\	empArrayobj\.deleteEmployee\(ein2\)\;\n\	\	\	\	System\.out\.println\(\&quot;Employee information deleted\.\\n\&quot;\)\;\n\n\	\	\	\	break\;\n\n\	\	\	case 3\:\n\	\	\	\	int ein3\;\n\	\	\	\	System\.out\.println\(\&quot;Enter employee ID to updated\: \&quot;\)\;\n\	\	\	\	Scanner uinfo3 \= new Scanner\(System\.in\)\;\n\	\	\	\	ein3 \= uinfo3\.nextInt\(\)\;\n\	\	\	\	try \n\	\	\	\	\{\n\	\	\	\	\	empArrayobj\.updateEmployee\(ein3\)\;\n\	\	\	\	\	System\.out\.println\(\&quot;Employee Information Updated\.\\n\&quot;\)\;\n\	\	\	\	\}\n\	\	\	\	catch\(customExceptions e\)\n\	\	\	\	\{\n\	\	\	\	\	System\.out\.println\(e\.toString\(\)\)\;\n\	\	\	\	\	System\.out\.println\(\&quot;Please re enter the values\.\&quot;\)\;\n\	\	\	\	\}\n\	\	\	\	break\;\n\n\	\	\	case 4\:\n\	\	\	\	int tempidHolder4\;\n\	\	\	\	System\.out\.println\(\&quot;\\nEnter the EmployeeID to search for\: \&quot;\)\;\n\	\	\	\	Scanner uid \= new Scanner\(System\.in\)\;\n\	\	\	\	tempidHolder4 \= uid\.nextInt\(\)\;\n\	\	\	\	Employee foundID\;\n\	\	\	\	foundID \= empArrayobj\.dispEmployeeID\(tempidHolder4\)\;\n\	\	\	\	System\.out\.println\(\&quot;\\nFound\: \&quot; \+ foundID \+ \&quot;\\n\&quot;\)\;\n\	\	\	\	break\;\n\n\	\	\	case 5\:\n\	\	\	\	Employee\[\] empArrMain \= empArrayobj\.dispEmployee\(\)\;\n\	\	\	\	for \(int i \= 0\; i \&lt; empArrMain\.length\; i\+\+\) \{\n\	\	\	\	\	if \(empArrMain\[i\] \!\= null\) \{\n\	\	\	\	\	\	System\.out\.println\(empArrMain\[i\]\)\;\n\	\	\	\	\	\}\n\	\	\	\	\}\n\	\	\	\	break\;\n\n\	\	\	case 6\:\n\	\	\	\	int tempidHolder6 \= 0\;\n\	\	\	\	float hra\;\n\	\	\	\	System\.out\.println\(\&quot;\\nEnter the Employees ID for his\/her HRA\&quot;\)\;\n\	\	\	\	Scanner uid6 \= new Scanner\(System\.in\)\;\n\	\	\	\	tempidHolder6 \= uid6\.nextInt\(\)\;\n\	\	\	\	hra \= empArrayobj\.getHRAbyID\(tempidHolder6\)\;\n\	\	\	\	System\.out\.println\(\&quot;The Employee with ID\: \&quot; \+ tempidHolder6 \+ \&quot; has HRA of\: \&quot; \+ hra \+ \&quot;\\n\&quot;\)\;\n\	\	\	\	break\;\n\n\	\	\	case 7\:\n\	\	\	\	int tempHolder7 \= 0\;\n\	\	\	\	float grossSalary\;\n\	\	\	\	System\.out\.println\(\&quot;Enter the Employees ID for his\/her Gross Salary\&quot;\)\;\n\	\	\	\	Scanner uid7 \= new Scanner\(System\.in\)\;\n\	\	\	\	tempHolder7 \= uid7\.nextInt\(\)\;\n\	\	\	\	grossSalary \= empArrayobj\.grossSalaryByID\(tempHolder7\)\;\n\	\	\	\	System\.out\.println\(\n\	\	\	\	\	\	\&quot;The Employee with ID\: \&quot; \+ tempHolder7 \+ \&quot; has a Gross Salary of\: \&quot; \+ grossSalary \+ \&quot;\\n\&quot;\)\;\n\	\	\	\	break\;\n\	\	\	\	\n\	\	\	\	case 8\:\n\	\	\	\	\	empArrayobj\.saveToFile\(\)\;\n\	\	\	\	\	System\.out\.println\(\&quot;File Saved in\: \&quot;\+EmployeeUtil\.getFilePath\(\)\)\;\n\	\	\	\	\	break\;\	\n\	\	\	\	\n\	\	\	case 9\:\n\	\	\	\	empArrayobj\.saveToFile\(\)\;\n\	\	\	\	System\.out\.println\(\&quot;File Saved in\: \&quot;\+EmployeeUtil\.getFilePath\(\)\)\;\n\	\	\	\	break\;\n\n\	\	\	default\:\n\	\	\	\	System\.out\.println\(\&quot;Selected an invalid option\, Please select another\\n\&quot;\)\;\n\n\	\	\	\}</find>
+      <find>read</find>
+      <find>initinsertEmployeeDb</find>
+      <find>C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\DatabaseUse\\dbLogin.properties</find>
+      <find>init</find>
+      <find>clean</find>
+      <find>initconn</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -63,11 +159,18 @@
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeUtil.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollections.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArray.java" />
-        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeUtil.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeDatabaseInterface.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeDatabase.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/dbLogin.properties" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollections.java" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollectionsInterface.java" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabaseInterface.java" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/MasterInterface.java" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServicesInterface.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServices.java" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeUtil.java" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabase.java" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArrayMain.java" />
       </list>
     </option>
   </component>
@@ -81,9 +184,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="979" />
-    <option name="height" value="1040" />
+    <option name="x" value="-8" />
+    <option name="width" value="977" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -108,6 +211,27 @@
               <item name="CoreJava_Initial" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Employee_Initial" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java_Frameworks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoreJava_Initial" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Employee_Initial" type="462c0819:PsiDirectoryNode" />
+              <item name="Arrays" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java_Frameworks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoreJava_Initial" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Employee_Initial" type="462c0819:PsiDirectoryNode" />
+              <item name="Collections" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Java_Frameworks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoreJava_Initial" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Employee_Initial" type="462c0819:PsiDirectoryNode" />
+              <item name="CommonFiles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Java_Frameworks" type="b2602c69:ProjectViewProjectNode" />
@@ -155,6 +279,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
   </component>
   <component name="RecentsManager">
@@ -175,9 +300,9 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="EmployeeDatabase" type="Application" factoryName="Application">
+    <configuration name="EmployeeArrayMain" type="Application" factoryName="Application">
       <option name="INCLUDE_PROVIDED_SCOPE" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Employee_Initial.EmployeeDatabase" />
+      <option name="MAIN_CLASS_NAME" value="Employee_Initial.Arrays.EmployeeArrayMain" />
       <module name="CoreJava_Initial" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
@@ -271,29 +396,32 @@
       <workItem from="1529567433094" duration="6486000" />
       <workItem from="1529576844127" duration="1759000" />
       <workItem from="1529578753543" duration="249000" />
+      <workItem from="1529607234182" duration="9825000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32451000" />
+    <option name="totallyTimeSpent" value="42276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49479166" weight="0.32965517" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.35221353" side_tool="true" visible="true" weight="0.32965517" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.35481772" side_tool="true" visible="true" weight="0.32965517" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.5970052" weight="0.32965517" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.64778644" weight="0.32965517" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6451823" weight="0.32965517" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49382716" visible="true" weight="0.16796875" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49382716" visible="true" weight="0.13867188" />
       <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.609375" weight="0.32965517" />
       <window_info id="Learn" order="2" />
-      <window_info anchor="right" x="1253" y="166" width="286" height="245" id="Structure" order="7" sideWeight="0.50617284" side_tool="true" visible="true" weight="0.08203125" />
+      <window_info anchor="right" x="1253" y="166" width="286" height="245" id="Structure" order="7" sideWeight="0.50617284" side_tool="true" visible="true" weight="0.15104167" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986979" weight="0.4" />
@@ -303,8 +431,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49804688" weight="0.32965517" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49674478" weight="0.32965517" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,24 +471,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Payment/AuthRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArrayMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -578,31 +690,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollectionsInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArray.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="29" column="5" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServicesInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -620,40 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabaseInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2516">
-          <caret line="156" column="24" selection-start-line="156" selection-start-column="24" selection-end-line="156" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3757">
-          <caret line="228" column="24" selection-start-line="228" selection-start-column="24" selection-end-line="228" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/dbLogin.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -661,31 +718,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArrayMain.java">
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollectionsInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/MasterInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="61" lean-forward="true" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabaseInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServicesInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServices.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="16" column="58" selection-start-line="16" selection-start-column="58" selection-end-line="16" selection-end-column="58" />
+          <caret line="24" column="45" lean-forward="true" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="59" />
+          <folding>
+            <element signature="e#1422#1423#0" expanded="true" />
+            <element signature="e#1460#1461#0" expanded="true" />
+            <element signature="e#2287#2288#0" expanded="true" />
+            <element signature="e#2320#2321#0" expanded="true" />
+            <element signature="e#5277#5278#0" expanded="true" />
+            <element signature="e#5326#5327#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Collections/EmployeeArrayCollections.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeData.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/DatabaseUse/EmployeeDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="191" lean-forward="true" selection-start-line="191" selection-end-line="191" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeServices.java">
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/EmployeeUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2975">
-          <caret line="195" column="42" lean-forward="true" selection-start-line="195" selection-start-column="42" selection-end-line="195" selection-end-column="42" />
+        <state relative-caret-position="4318">
+          <caret line="270" column="179" selection-start-line="270" selection-start-column="179" selection-end-line="270" selection-end-column="179" />
           <folding>
-            <element signature="e#5318#5319#0" expanded="true" />
-            <element signature="e#5367#5368#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/CommonFiles/Employee.java">
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/Arrays/EmployeeArrayMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="306">
+          <caret line="82" column="69" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -8,11 +8,11 @@ public interface EmployeeArrayCollectionsInterface
 {
 	public void readFromFile() throws Exception;
 	public void saveToFile();
-	public ArrayList<Employee> dispEmp();
-	public void addEmp(Employee emp);
-	public void updateEmp(int empid, Employee emp);
+	public ArrayList<Employee> dispEmployee();
+	public void addEmployee(Employee emp);
+	public void updateEmployee(int empid, Employee emp);
 	public void deleteEmployee(int empid);
-	public Employee dispEmpID(int empID);
+	public Employee dispEmployeeID(int empID);
 	public ArrayList<Employee> getEmpArrList();
 	public void setEmpArrList(ArrayList<Employee> empArrList);
 }

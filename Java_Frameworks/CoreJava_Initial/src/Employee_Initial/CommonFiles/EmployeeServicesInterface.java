@@ -21,4 +21,11 @@ public interface EmployeeServicesInterface{
 	public float getHRAbyIDCollections(int empid);//throws customExceptions;throws customExceptions;
 	public float grossSalaryByIDCollections(int empid);//throws customExceptions;throws customExceptions;
 	public void saveToFileCollections();
+
+	//Methods for using DB methods
+	public ArrayList<Employee> displayEmployeesDB();
+	public Employee displaybyIDfromDB(int empid);
+	public void insertEmployeeDb(int empid);
+	public void deleteEmployeeDB(int empid);
+	public ArrayList<Employee> sortEmployeesDB(String column);
 }

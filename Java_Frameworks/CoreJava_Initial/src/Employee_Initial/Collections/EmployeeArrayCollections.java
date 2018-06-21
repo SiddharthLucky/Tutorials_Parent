@@ -56,12 +56,12 @@ public class EmployeeArrayCollections implements EmployeeArrayCollectionsInterfa
 	}
 	
 	@Override
-	public ArrayList<Employee> dispEmp() {
+	public ArrayList<Employee> dispEmployee() {
 		return getEmpArrList();
 	}
 	
 	@Override
-	public Employee dispEmpID(int empID) {
+	public Employee dispEmployeeID(int empID) {
 		Employee tempObjHolder = null;
 		ArrayList<Employee> tempArrHolder = getEmpArrList();
 		for(Employee emp : tempArrHolder)
@@ -90,7 +90,7 @@ public class EmployeeArrayCollections implements EmployeeArrayCollectionsInterfa
 	}
 	
 	@Override
-	public void updateEmp(int empid, Employee emp) 
+	public void updateEmployee(int empid, Employee emp)
 	{
 		// Isolating the employee obj with relevant information
 		ArrayList<Employee> tempArrHolder = getEmpArrList();
@@ -106,7 +106,7 @@ public class EmployeeArrayCollections implements EmployeeArrayCollectionsInterfa
 	}
 	
 	@Override
-	public void addEmp(Employee emp) {
+	public void addEmployee(Employee emp) {
 		ArrayList<Employee> tempArrHolder = getEmpArrList();
 
 		tempArrHolder.add(emp);

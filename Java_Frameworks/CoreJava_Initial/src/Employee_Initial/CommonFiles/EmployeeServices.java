@@ -6,6 +6,8 @@ import Employee_Initial.Arrays.EmployeeArray;
 import Employee_Initial.Arrays.EmployeeArrayInterface;
 import Employee_Initial.Collections.EmployeeArrayCollections;
 import Employee_Initial.Collections.EmployeeArrayCollectionsInterface;
+import Employee_Initial.DatabaseUse.EmployeeDatabase;
+import Employee_Initial.DatabaseUse.EmployeeDatabaseInterface;
 
 import java.util.ArrayList;
 
@@ -13,6 +15,7 @@ public class EmployeeServices implements EmployeeServicesInterface {
 
 	 EmployeeArrayInterface empArrVal;
 	 EmployeeArrayCollectionsInterface empArrValCollections;
+	 EmployeeDatabaseInterface empDB;
 
 	// You are just initializing an object that refers to the methods in the EmployeeArray class
 
@@ -20,6 +23,7 @@ public class EmployeeServices implements EmployeeServicesInterface {
 	{
 		empArrVal = new EmployeeArray(EmployeeUtil.getArrSize());
 		empArrValCollections = new EmployeeArrayCollections();
+		empDB = new EmployeeDatabase();
 		try {
 			empArrVal.readFromFile();
 			empArrValCollections.readFromFile();
@@ -126,7 +130,7 @@ public class EmployeeServices implements EmployeeServicesInterface {
         Employee emp = EmployeeUtil.collectInfo();
         if(emp == null)
             throw new customExceptions("Adding employee failed");
-        empArrValCollections.addEmp(emp);
+        empArrValCollections.addEmployee(emp);
     }
 
     @Override
@@ -143,14 +147,14 @@ public class EmployeeServices implements EmployeeServicesInterface {
         emp = EmployeeUtil.collectInfo_Update(empid);
         if (emp == null)
             throw new customExceptions("Updtaing employee failed");
-        empArrValCollections.updateEmp(empid, emp);
+        empArrValCollections.updateEmployee(empid, emp);
     }
 
     //Display Employees list by ID
     @Override
     public Employee dispEmployeeIDCollections(int empid)
     {
-        Employee emp = empArrValCollections.dispEmpID(empid);
+        Employee emp = empArrValCollections.dispEmployeeID(empid);
         return emp;
     }
 
@@ -158,7 +162,7 @@ public class EmployeeServices implements EmployeeServicesInterface {
     @Override
     public ArrayList<Employee> dispEmployeeCollections()
     {
-        return empArrValCollections.dispEmp();
+        return empArrValCollections.dispEmployee();
     }
 
     //Get hRA based on employee id
@@ -195,4 +199,60 @@ public class EmployeeServices implements EmployeeServicesInterface {
     {
         empArrValCollections.saveToFile();
     }
+
+
+    //Methods to access the Database DAO class
+	@Override
+	public ArrayList<Employee> displayEmployeesDB()
+	{
+		ArrayList<Employee> tempArr = null;
+		try {
+			tempArr = empDB.displayEmployeesDB();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return tempArr;
+	}
+
+	@Override
+	public Employee displaybyIDfromDB(int empid)
+	{
+		Employee emp = null;
+		try {
+			emp = empDB.displaybyIDfromDB(empid);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return emp;
+	}
+
+
+	@Override
+	public void insertEmployeeDb(int empid)
+	{
+		try {
+			empDB.insertEmployeeDb(empid);
+			System.out.println("Data Successfully inserted DB");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void deleteEmployeeDB(int empid)
+	{
+		try {
+			empDB.deleteEmployeefromDB(empid);
+			System.out.println("Employee Info successfully deleted");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public ArrayList<Employee> sortEmployeesDB(String column)
+	{
+		ArrayList<Employee> tempArr = empDB.sortDataDB(column);
+		return tempArr;
+	}
 }

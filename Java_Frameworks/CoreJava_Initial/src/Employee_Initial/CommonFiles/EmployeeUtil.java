@@ -228,7 +228,7 @@ public class EmployeeUtil{
 	//Method to store DB file path
 	public static String getFilePathDB()
 	{
-		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\dbLogin.properties";
+		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\DatabaseUse\\dbLogin.properties";
 		return filePath;
 	}
 	
@@ -268,7 +268,7 @@ public class EmployeeUtil{
 	public static Connection initConnection() throws Exception
 	{
 		Properties props = new Properties();
-		FileInputStream in = new FileInputStream("C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\dbLogin.properties");
+		FileInputStream in = new FileInputStream("C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\DatabaseUse\\dbLogin.properties");
 		props.load(in);
 		in.close();
 

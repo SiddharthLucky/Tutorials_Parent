@@ -1,57 +1,41 @@
 package Employee_Initial.DatabaseUse;
 
-import Employee_Initial.Collections.EmployeeArrayCollections;
-import Employee_Initial.CommonFiles.EmployeeUtil;
 import Employee_Initial.CommonFiles.Employee;
+import Employee_Initial.CommonFiles.EmployeeUtil;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.sql.*;
 import java.util.ArrayList;
 
-public class EmployeeDatabase implements EmployeeDatabaseInterface{
+public class EmployeeDatabase implements EmployeeDatabaseInterface {
 
     public EmployeeDatabase()
     {
-        EmployeeArrayCollections arrColl= new EmployeeArrayCollections();
-        try {
-            arrColl.readFromFile();
-            ArrayList<Employee> tempArr= arrColl.getEmpArrList();
-            for(Employee emp : tempArr)
-            {
-                insertEmployeeDb(emp);
+            ArrayList<Employee> tempArrHolder = null;
+            String filePath = EmployeeUtil.getFilePath();
+            String line = "";
+            String splitBy = ", ";
+
+            boolean check = EmployeeUtil.checkFileExists(filePath);
+            if(check == true) {
+                try {
+                    BufferedReader breader = new BufferedReader(new FileReader(filePath));
+                    int i = 0;
+                    Employee emp;
+                    while ((line = breader.readLine()) != null) {
+                        String[] tempvalues = line.split(splitBy);
+                        emp = EmployeeUtil.init_Employee(Integer.parseInt(tempvalues[0]), tempvalues[1], Integer.parseInt(tempvalues[2]), Integer.parseInt(tempvalues[3]));
+                        initinsertEmployeeDb(emp);
+                        i++;
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-            System.out.println("Values have been placed");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+
     }
-
-    public static void main(String[] args)
-    {
-        EmployeeDatabase empdb = new EmployeeDatabase();
-
-        //Checking if method works
-
-
-        //Method to display all employees
-        try {
-            ArrayList<Employee> emparrtest = empdb.displayEmployeesDB();
-            for(Employee emp : emparrtest)
-            {
-                System.out.println(emp.getEin()+" "+emp.geteName());
-            }
-            Employee emp = empdb.displaybyIDfromDB(1);
-            System.out.println(emp.getEin()+" "+emp.geteName()+" "+emp.geteSalary());
-
-            //empdb.insertEmployeeDb(emp);
-            //empdb.deleteEmployeefromDB(1);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
+    
     //Method to display all the employees in the Database
     @Override
     public ArrayList<Employee> displayEmployeesDB() throws Exception
@@ -69,15 +53,7 @@ public class EmployeeDatabase implements EmployeeDatabaseInterface{
                 Statement stmt;
                 stmt = con.createStatement();
                 ResultSet rs = stmt.executeQuery(sql);
-                while (rs.next())
-                {
-                    int id = rs.getInt("ein");
-                    String name = rs.getString("employee_name");
-                    int salary = rs.getInt("employee_salary");
-                    int age = rs.getInt("employee_age");
-                    Employee emp = EmployeeUtil.init_Employee(id, name, salary, age);
-                    empArrayDB.add(emp);
-                }
+                EmployeeList(empArrayDB, rs);
                 con.close();
             }
 
@@ -87,6 +63,18 @@ public class EmployeeDatabase implements EmployeeDatabaseInterface{
             e.printStackTrace();
         }
         return empArrayDB;
+    }
+
+    private void EmployeeList(ArrayList<Employee> empArrayDB, ResultSet rs) throws SQLException {
+        while (rs.next())
+        {
+            int id = rs.getInt("ein");
+            String name = rs.getString("employee_name");
+            int salary = rs.getInt("employee_salary");
+            int age = rs.getInt("employee_age");
+            Employee emp = EmployeeUtil.init_Employee(id, name, salary, age);
+            empArrayDB.add(emp);
+        }
     }
 
     //Method to display employee by id from database
@@ -119,13 +107,28 @@ public class EmployeeDatabase implements EmployeeDatabaseInterface{
 
     //Method to insert into db
     @Override
-    public void insertEmployeeDb(Employee emp) throws Exception
+    public void insertEmployeeDb(int empid) throws Exception
     {
         boolean checkval;
         String filePath = EmployeeUtil.getFilePathDB();
         checkval = EmployeeUtil.checkFileExists(filePath);
-        if(checkval == true)
+        ArrayList<Employee> tempArr  = displayEmployeesDB();
+        for(Employee emp : tempArr)
         {
+            if(emp.getEin() == empid)
+            {
+                cleanInsertDB(emp);
+            }
+        }
+    }
+
+    private void initinsertEmployeeDb(Employee emp) throws Exception
+    {
+        boolean checkval;
+        cleanInsertDB(emp);
+    }
+
+    private void cleanInsertDB(Employee emp) throws Exception {
             Connection con = EmployeeUtil.initConnection();
             String sql = "Insert into employee_info (ein , employee_name, employee_salary, employee_age, emp_company) values (?, ?, ?, ?, ?)";
             PreparedStatement stmt;
@@ -137,7 +140,7 @@ public class EmployeeDatabase implements EmployeeDatabaseInterface{
             stmt.setString(5, emp.geteCompany());
             stmt.executeUpdate();
             con.close();
-        }
+
     }
 
     //Method to delete values from DB
@@ -156,5 +159,33 @@ public class EmployeeDatabase implements EmployeeDatabaseInterface{
             stmt.executeUpdate();
             con.close();
         }
+    }
+
+    //Method to sort the data by salary
+    @Override
+    public ArrayList<Employee> sortDataDB(String column)
+    {
+        ArrayList<Employee> empArrayDB = new ArrayList<>();
+        try
+        {
+            boolean checkval;
+            String filePath = EmployeeUtil.getFilePathDB();
+            checkval = EmployeeUtil.checkFileExists(filePath);
+            if (checkval == true)
+            {
+                Connection con = EmployeeUtil.initConnection();
+                String sql = "Select ein, employee_name, employee_salary, employee_age from employee_info order by " + column + " desc";
+                Statement stmt;
+                stmt = con.createStatement();
+                ResultSet rs = stmt.executeQuery(sql);
+                EmployeeList(empArrayDB, rs);
+                con.close();
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+        return empArrayDB;
     }
 }
