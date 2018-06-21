@@ -2,13 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1de87c-15d2-417b-aecb-db1020b0cbfc" name="Default" comment="Made initialization changes to the file EmployeeArrayCollections.">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/lucky.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/dbLogin.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Intial_Java/.markers" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Intial_Java/.markers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Intial_Java/org.eclipse.jdt.core/state.dat" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.projects/Intial_Java/org.eclipse.jdt.core/state.dat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/.recommenders/index/http___download_eclipse_org_recommenders_models_oxygen_/segments.gen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/CoreJava_Initial.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/CoreJava_Initial.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Customer_Serialize/Customer_Serialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Customer_Serialize/Customer_Serialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServicesInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServicesInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JavaNotes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/JavaNotes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CoreJava_Initial/Customer_Serialize/Customer_Serialization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CoreJava_Initial/Customer_Serialize/Customer_Serialization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CoreJava_Initial/Employee_Initial/EmployeeServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CoreJava_Initial/Employee_Initial/EmployeeServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CoreJava_Initial/Employee_Initial/EmployeeServicesInterface.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CoreJava_Initial/Employee_Initial/EmployeeServicesInterface.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CoreJava_Initial/Employee_Initial/EmployeeUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CoreJava_Initial/Employee_Initial/EmployeeUtil.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,11 +40,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EmployeeArrayCollectionsInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollectionsInterface.java">
+      <file leaf-file-name="EmployeeDatabase.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+            <state relative-caret-position="34">
+              <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EmployeeArray.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArray.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="-549550714.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -35,8 +70,8 @@
       <file leaf-file-name="EmployeeArrayCollections.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollections.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+            <state relative-caret-position="221">
+              <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
               <folding>
                 <element signature="e#416#417#0" expanded="true" />
                 <element signature="e#449#450#0" expanded="true" />
@@ -47,34 +82,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeArrayMain.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayMain.java">
+      <file leaf-file-name="EmployeeArrayInterface.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayInterface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="10" column="68" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="68" />
+            <state relative-caret-position="187">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeServices.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java">
+      <file leaf-file-name="dbLogin.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/dbLogin.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="114" selection-start-line="114" selection-end-line="114" />
+            <state relative-caret-position="85">
+              <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeServicesInterface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServicesInterface.java">
+      <file leaf-file-name="EmployeeUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeUtil.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+            <state relative-caret-position="-102">
+              <caret line="2" column="11" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>init</find>
+      <find>check</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -86,11 +134,16 @@
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Payment/IncrementAuthorizationRequest.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayInterface.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayMain.java" />
-        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollections.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArray.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollectionsInterface.java" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServicesInterface.java" />
+        <option value="$PROJECT_DIR$/JavaNotes.txt" />
         <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/dbLogin.properties" />
+        <option value="$PROJECT_DIR$/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeUtil.java" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollections.java" />
+        <option value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeDatabase.java" />
       </list>
     </option>
   </component>
@@ -104,8 +157,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-10" />
-    <option name="width" value="980" />
+    <option name="x" value="1195" />
+    <option name="width" value="730" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -114,17 +167,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Java_Frameworks" type="58d84e3e:PackageViewProjectNode" />
-              <item name="CoreJava_Initial" type="616d4139:PackageViewModuleNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -143,11 +185,26 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Employee_Initial" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Java_Frameworks" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Java_Frameworks" type="58d84e3e:PackageViewProjectNode" />
+              <item name="CoreJava_Initial" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -164,7 +221,9 @@
     <property name="SearchEverywhereHistoryKey" value="project&#9;ACTION&#9;ActivateProjectToolWindow" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Properties" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="C:/Program Files/MySQL/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46.jar!/" />
     <property name="nodejs.jest.jest_package" value="" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -267,40 +326,46 @@
       <workItem from="1529429332224" duration="3158000" />
       <workItem from="1529528251814" duration="93000" />
       <workItem from="1529535970059" duration="90000" />
+      <workItem from="1529537601229" duration="4953000" />
+      <workItem from="1529561058527" duration="1903000" />
+      <workItem from="1529563000050" duration="380000" />
+      <workItem from="1529563497796" duration="124000" />
+      <workItem from="1529563722112" duration="132000" />
+      <workItem from="1529564180750" duration="858000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14030000" />
+    <option name="totallyTimeSpent" value="22380000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.49739584" weight="0.32965517" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.4518229" side_tool="true" visible="true" weight="0.32965517" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.453125" side_tool="true" visible="true" weight="0.32965517" />
       <window_info anchor="right" id="Maven Projects" order="5" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.54817706" weight="0.32965517" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.5970052" weight="0.32965517" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.546875" weight="0.32965517" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="1" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49382716" visible="true" weight="0.19661458" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49382716" visible="true" weight="0.16796875" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Learn" order="2" />
-      <window_info anchor="right" x="1253" y="166" width="286" height="245" id="Structure" order="7" sideWeight="0.50617284" side_tool="true" visible="true" weight="0.18619792" />
+      <window_info anchor="right" x="1253" y="166" width="286" height="245" id="Structure" order="7" sideWeight="0.50617284" side_tool="true" visible="true" weight="0.11783854" />
       <window_info id="UI Designer" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986979" weight="0.4" />
       <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4986979" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Messages" order="7" sideWeight="0.4986979" weight="0.32965517" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986979" weight="0.32965517" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49804688" weight="0.32965517" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -345,62 +410,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Payment/AuthRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Payment/IncrementAuthorizationRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Payment/AuthRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Payment/IncrementAuthorizationRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -637,17 +646,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayMain.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JavaNotes.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="10" column="68" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="68" />
+        <state relative-caret-position="1683">
+          <caret line="99" column="112" selection-start-line="99" selection-start-column="112" selection-end-line="99" selection-end-column="112" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArray.java">
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="2006">
+          <caret line="127" column="41" selection-start-line="127" selection-start-column="41" selection-end-line="127" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayMain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollectionsInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServicesInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="16" column="41" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Customer_Serialize/Customer_Serialization.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -658,10 +701,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/dbLogin.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollections.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+        <state relative-caret-position="221">
+          <caret line="19" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
           <folding>
             <element signature="e#416#417#0" expanded="true" />
             <element signature="e#449#450#0" expanded="true" />
@@ -671,24 +728,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArrayCollectionsInterface.java">
+    <entry file="file://$PROJECT_DIR$/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        <state relative-caret-position="17">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServicesInterface.java">
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeArray.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="41" selection-start-line="16" selection-start-column="41" selection-end-line="16" selection-end-column="41" />
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeServices.java">
+    <entry file="file://$PROJECT_DIR$/CoreJava_Initial/src/Employee_Initial/EmployeeDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="114" selection-start-line="114" selection-end-line="114" />
+        <state relative-caret-position="34">
+          <caret line="2" column="29" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
         </state>
       </provider>
     </entry>

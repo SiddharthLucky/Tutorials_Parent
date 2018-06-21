@@ -1,19 +1,13 @@
 package Employee_Initial;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
 import java.io.IOException;
-import java.io.ObjectOutputStream;
-import java.io.OutputStreamWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.InputMismatchException;
+import java.util.Properties;
 import java.util.Scanner;
-
-import javax.swing.JFileChooser;
 
 // You can set the methods static when there are no instance variables created.
 // 
@@ -235,6 +229,12 @@ public class EmployeeUtil{
 	{
 		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\EmployeeData.csv";
 		File file = new File(filePath);
+		createFile(file);
+		return file;
+	}
+
+
+	public static void createFile(File file) {
 		if(!file.exists())
 		{
 			System.out.println("The designated file doesnt exist.");
@@ -245,9 +245,8 @@ public class EmployeeUtil{
 				e.printStackTrace();
 			}
 		}
-		return file;
 	}
-	
+
 	public static boolean checkFileExists(String filePath)
 	{
 		boolean exists = false;
@@ -257,6 +256,25 @@ public class EmployeeUtil{
 			exists = true;
 		}
 		return exists;
+	}
+
+	public static void initConnection() throws Exception
+	{
+		Properties props = new Properties();
+		FileInputStream in = new FileInputStream("Employee_Initial/dbLogin.properties");
+		props.load(in);
+		in.close();
+
+		String driver = props.getProperty("jdbc.driver");
+		if (driver != null) {
+			Class.forName(driver) ;
+		}
+
+		String url = props.getProperty("jdbc.url");
+		String username = props.getProperty("jdbc.username");
+		String password = props.getProperty("jdbc.password");
+
+		Connection con = DriverManager.getConnection(url, username, password);
 	}
 }
 

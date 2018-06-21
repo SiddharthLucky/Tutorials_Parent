@@ -14,7 +14,7 @@ public interface EmployeeServicesInterface{
 
 	//Methods for using collections
 	public void addEmployeeCollections() throws customExceptions;
-	public void deleteEmployeeColelctions(int empid);//throws customExceptions;
+	public void deleteEmployeeCollections(int empid);//throws customExceptions;
 	public void updateEmployeeCollections(int empid)throws customExceptions;
 	public Employee dispEmployeeIDCollections(int empid);//throws customExceptions;throws customExceptions;
 	public ArrayList<Employee> dispEmployeeCollections();//throws customExceptions;throws customExceptions;

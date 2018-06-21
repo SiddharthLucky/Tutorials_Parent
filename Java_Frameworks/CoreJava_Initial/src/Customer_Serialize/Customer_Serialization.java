@@ -1,5 +1,7 @@
 package Customer_Serialize;
 
+import Employee_Initial.EmployeeUtil;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -46,16 +48,7 @@ public class Customer_Serialization {
 	{
 		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Customer_Serialize\\CustomerInfo.dat";
 		File file = new File(filePath);
-		if(!file.exists())
-		{
-			System.out.println("The designated file doesnt exist.");
-			System.out.println("New file is being created");
-			try {
-				file.createNewFile();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
-		return file;
+        EmployeeUtil.createFile(file);
+        return file;
 	}
 }

@@ -125,7 +125,7 @@ public class EmployeeServices implements EmployeeServicesInterface {
     }
 
     @Override
-    public void deleteEmployeeColelctions(int empid)
+    public void deleteEmployeeCollections(int empid)
     {
         empArrValCollections.deleteEmployee(empid);
     }
