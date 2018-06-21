@@ -6,18 +6,17 @@ import Employee_Initial.Arrays.EmployeeArray;
 import Employee_Initial.Arrays.EmployeeArrayInterface;
 import Employee_Initial.Collections.EmployeeArrayCollections;
 import Employee_Initial.Collections.EmployeeArrayCollectionsInterface;
-import Employee_Initial.Employee;
 
 import java.util.ArrayList;
 
 public class EmployeeServices implements EmployeeServicesInterface {
 
-	private EmployeeArrayInterface empArrVal;
-	private EmployeeArrayCollectionsInterface empArrValCollections;
+	 EmployeeArrayInterface empArrVal;
+	 EmployeeArrayCollectionsInterface empArrValCollections;
 
 	// You are just initializing an object that refers to the methods in the EmployeeArray class
 
-	EmployeeServices()
+	public EmployeeServices()
 	{
 		empArrVal = new EmployeeArray(EmployeeUtil.getArrSize());
 		empArrValCollections = new EmployeeArrayCollections();

@@ -1,6 +1,6 @@
 package Employee_Initial.Arrays;
 
-import Employee_Initial.Employee;
+import Employee_Initial.CommonFiles.Employee;
 
 public interface EmployeeArrayInterface
 {

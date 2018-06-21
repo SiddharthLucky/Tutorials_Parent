@@ -1,7 +1,5 @@
 package Employee_Initial.CommonFiles;
 
-import Employee_Initial.Employee;
-
 import java.util.ArrayList;
 
 public interface EmployeeServicesInterface{

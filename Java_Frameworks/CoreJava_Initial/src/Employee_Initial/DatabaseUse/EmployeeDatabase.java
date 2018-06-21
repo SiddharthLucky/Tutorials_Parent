@@ -1,7 +1,8 @@
-package Employee_Initial;
+package Employee_Initial.DatabaseUse;
 
 import Employee_Initial.Collections.EmployeeArrayCollections;
 import Employee_Initial.CommonFiles.EmployeeUtil;
+import Employee_Initial.CommonFiles.Employee;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

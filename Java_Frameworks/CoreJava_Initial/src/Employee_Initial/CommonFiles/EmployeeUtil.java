@@ -1,7 +1,5 @@
 package Employee_Initial.CommonFiles;
 
-import Employee_Initial.Employee;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;

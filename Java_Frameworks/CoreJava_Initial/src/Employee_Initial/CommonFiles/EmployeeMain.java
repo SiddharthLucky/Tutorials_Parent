@@ -1,7 +1,5 @@
 package Employee_Initial.CommonFiles;
 
-import Employee_Initial.Employee;
-
 public class EmployeeMain {
 
 	public static void main(String[] args) 

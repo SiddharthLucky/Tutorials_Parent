@@ -1,4 +1,6 @@
-package Employee_Initial;
+package Employee_Initial.DatabaseUse;
+
+import Employee_Initial.CommonFiles.Employee;
 
 import java.util.ArrayList;
 
