@@ -5,7 +5,7 @@ Core JAVA basics notes:
 - Instance variables as part of the methods of a class, but mainly to maintain the states of an object.
 
 - Static final makes all the values that are defined with the variable, makes it not be able to reinitialize it again and the value wont be changed
-final keyword the value cant be changed, declare the final variable un uppercase.
+final keyword the value cant be changed, decalre the final variable un uppercase.
 
 - When an to string method is created that overrides the parent to string, you can directly access the information by sys.out(object name) which generally means
 sys.out(object name.toString()),
@@ -16,25 +16,25 @@ an new null reference exception.
 - When you find more reusable code, you can use static methods to reduce redundant code.
 
 - All of these static methods can be moved to a util class to keep the code cleaner, the util class
-mainly should contain mostly only static methods. Kinda to increase readability.
+mainly should contain mostly only static emthods. Kinda to increase reusability.
 
 - Keep in mind the class designs, make them look cleaner.
 
-- Static declaration will keep one copy per class, example only 1 employee then the methods should be static.
+- Static decleration will keep one copy per class, example only 1 employee then the methods should be static.
 
 - You can create constructor from source, generate constructor on fields in class.
 
-- fir salary compare you can use ternary operator - example directly
+- fir salary conmapre you can use terenary operator - example directly
 return emp.getsal() > emp2.getsal() ? emp1|emp2
 -------------------Session 2--------------
 
 
 - Once the reference to the object is updated the value will also be updated ie when you
 pass the object as a parameter. Depends on the tye of the variable declared as
-instance is accessible to what.
+instance is accessable to what.
 
 - Var args can be used when you dont know how many arguments are coming through, args are strings by default.
-indicated by using type and ... dots, example function funcName(String...args)
+indecated by using type and ... dots, example function funcName(String...args)
 
 - Any objects that need to be released or for garbage collecter to collect, you can include all of them in finalize.
 
@@ -57,21 +57,21 @@ send the object, that way you wont have to change the methods again and again, i
 
 - Make it a point that the Main class file should depend on the class with implementations but not vice versa.
 
-- The operations class ie, class with operations methods should not contain any System.out.print statements.
+- The operations class ie, class with operations methods should not contain any Syste.out.print statements.
 
 - The database generally contains basic functions like Find employee and all, basic CRUD operations.
 
 - If there are a lot of information to be gathered by the user, you can make a new private method and access it to return an object.
 
-- Any class if it takes parameters and makes an activity can be static as it wouldn't have any instance methods.
+- Any class if it takes parameters and makes an activity can be static as it wouldnt have any isntance methods.
 
 - Since you are assigned to make an array management class, you dont have to make an array in the main class, as you dont have to
 return the array always as there should only be one copy in the util class that manages all the operations as array creating and deletion and so on.
 
-- Immutable classes are defined as final as their calue will not be changed, thai helps us achieve thread safety.
+- Immutable classes are defined as final as thier calue will not be changed, thsi helps us achieve thread safety.
 
-- Check when you need aggregation or composition - as times you need that u need 2 separate objects or fi you have to make the 2 object depended on
-the first object, for making the two objects dependant, you can initialize the second object in the constructor of the first object.
+- Check when you need aggregation or composition - as times you need that u need 2 seperate objects or fi you have to make the 2 object depended on
+the first object, for making the two objects dependant, you can initlaize the second object in the constructor of the first object.
 
 - More than 2 levels of inhertice can cause testing problems. For most multilevel problems it generally goes with a "is a" than a "has a" relation
 
@@ -88,13 +88,20 @@ to be released.
 
 - Advantages of using prepared statement is you can avoid SQL injection.
 
-- Look into the Design pattern of DAO design for better understanding. Look up DAO design pattern journaldev Java.
 
-- for the insert queries, use the column names so that the values will still be inserted as long as the columns are same in the DB.
+------------------- Session 6---------------
 
-- If the constructor has to be accessed make a method called create instance, then only u can create it.
-and the connection object returns the same object as it will not be null the next time.
+- The DAO class can only contain strictly CRUD operations, rest of all 
+operations can be handled by services class.
 
-- For large amounts of data, use the batch style coding to make the interaction faster.
+- Three types of inner classes, Member classes, Anonymous clases and local class.
 
-- Remember to register the third output parameter in the callable statements aka stored procedures and functions.
+- Reading from the file and all should be strictly handled by service class.
+Verify what you have to keep in the utilities class.
+
+- From java8, you can use the default function where in you can only implement
+teh function in a class only if you need it.
+
+- You can use System.out::println in a lambda function to directly print the value.
+foreach(System.out::println) is same as foreach(p -> system.out.println(p))
+such are called method references

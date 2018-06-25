@@ -1,13 +1,15 @@
 package Employee_Initial.CommonFiles;
 
-public class Employee 
+public class Employee implements Comparable<Employee>
 {
 	private int ein;
 	private String eName;
-	private int eSalary; // When you dont need multiple allocations use static and final. Memory purposes
+	private int eSalary; // When you do not need multiple allocations use static and final. Memory purposes
 	private int eAge;
 	private static String eCompany;
-	public enum Department
+	private int dno;
+
+    public enum Department
 	{
 		SALES(10),
 		PURCHASE(20),
@@ -16,12 +18,13 @@ public class Employee
 		
 		private int did;
 		
-		Department(int did)
+		Department(int dno)
 		{
-			this.did=did;
+			this.did=dno;
 		}
 	}
-	
+
+
 	public int getEin() 
 	{
 		return ein;
@@ -83,6 +86,14 @@ public class Employee
 			this.eSalary = 10000;
 		}
 	}
+
+    public int getDno() {
+        return dno;
+    }
+
+    public void setDno(int dno) {
+        this.dno = dno;
+    }
 	
 	public float HRA() // Functions names are not supposed to be in Capital names
 	{
@@ -110,6 +121,8 @@ public class Employee
 		Da = ((eSalary * perc) / 100);
 		return Da;
 	}
+
+
 	
 	@Override
 	public String toString() {
@@ -147,6 +160,35 @@ public class Employee
 			return false;
 		return true;
 	}
-	
-	
+
+    @Override
+    public int compareTo(Employee emp2)
+    {
+        if(this.geteSalary() > emp2.geteSalary())
+        {
+            return 1;
+        }
+        if(this.geteSalary() == emp2.geteSalary())
+        {
+            return 0;
+        }
+        else
+        {
+            return -1;
+        }
+    }
+
+    private static class employeeSalaryCompare
+    {
+        int empCompare(Employee emp2)
+        {
+            return this.empCompare(emp2);
+
+        }
+    }
+
+    private static class employeeDepartmentCompare
+    {
+
+    }
 }

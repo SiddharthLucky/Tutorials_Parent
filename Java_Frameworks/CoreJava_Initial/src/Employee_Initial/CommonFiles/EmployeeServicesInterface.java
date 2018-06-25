@@ -1,6 +1,6 @@
 package Employee_Initial.CommonFiles;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public interface EmployeeServicesInterface{
 	public void addEmployee() throws customExceptions;
@@ -17,15 +17,15 @@ public interface EmployeeServicesInterface{
 	public void deleteEmployeeCollections(int empid);//throws customExceptions;
 	public void updateEmployeeCollections(int empid)throws customExceptions;
 	public Employee dispEmployeeIDCollections(int empid);//throws customExceptions;throws customExceptions;
-	public ArrayList<Employee> dispEmployeeCollections();//throws customExceptions;throws customExceptions;
+	public List<Employee> dispEmployeeCollections();//throws customExceptions;throws customExceptions;
 	public float getHRAbyIDCollections(int empid);//throws customExceptions;throws customExceptions;
 	public float grossSalaryByIDCollections(int empid);//throws customExceptions;throws customExceptions;
 	public void saveToFileCollections();
 
 	//Methods for using DB methods
-	public ArrayList<Employee> displayEmployeesDB();
+	public List<Employee> displayEmployeesDB();
 	public Employee displaybyIDfromDB(int empid);
 	public void insertEmployeeDb(int empid);
 	public void deleteEmployeeDB(int empid);
-	public ArrayList<Employee> sortEmployeesDB(String column);
+	public List<Employee> sortEmployeesDB(String column);
 }

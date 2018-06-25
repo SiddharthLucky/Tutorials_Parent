@@ -1,13 +1,9 @@
 package Employee_Initial.Arrays;
 
-import Employee_Initial.CommonFiles.EmployeeServices;
-import Employee_Initial.CommonFiles.EmployeeServicesInterface;
-import Employee_Initial.CommonFiles.EmployeeUtil;
-import Employee_Initial.CommonFiles.customExceptions;
-import Employee_Initial.CommonFiles.Employee;
+import Employee_Initial.CommonFiles.*;
 
-import java.util.ArrayList;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class EmployeeArrayMain {
@@ -79,7 +75,7 @@ public class EmployeeArrayMain {
                         if (empArrMain1[i] != null) {
                             System.out.println(empArrMain1[i]);
                         }
-                        ArrayList<Employee> tempArr = empArrayobj.displayEmployeesDB();
+                        List<Employee> tempArr = empArrayobj.displayEmployeesDB();
                         System.out.println("Displaying values from DB");
                         for(Employee emp : tempArr)
                         {
@@ -110,7 +106,8 @@ public class EmployeeArrayMain {
                     break;
 
                 case 8:
-                    ArrayList<Employee> tempArr = empArrayobj.sortEmployeesDB("ein");
+                    displaySortingMenu();
+                    List<Employee> tempArr = empArrayobj.sortEmployeesDB("ein");
                     System.out.println("Printing the sorted list:\n");
                     for (Employee emp : tempArr) {
                         System.out.println(emp.toString());
@@ -146,6 +143,16 @@ public class EmployeeArrayMain {
         temp = uoption.nextInt();
         return temp;
         //throw new InputMismatchException();
+    }
 
+    public static void displaySortingMenu()
+    {
+        int tempSort = 0;
+        System.out.println("1. Sort by Salary:");
+        System.out.println("1. Sort by Name and Salary:");
+        System.out.println("1. Sort by Department:");
+        System.out.println("1. Sort by ID:");
+        Scanner sortuoption = new Scanner(System.in);
+        tempSort = sortuoption.nextInt();
     }
 }

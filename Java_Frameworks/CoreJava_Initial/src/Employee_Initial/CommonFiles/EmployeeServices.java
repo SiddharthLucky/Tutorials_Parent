@@ -10,6 +10,9 @@ import Employee_Initial.DatabaseUse.EmployeeDatabase;
 import Employee_Initial.DatabaseUse.EmployeeDatabaseInterface;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class EmployeeServices implements EmployeeServicesInterface {
 
@@ -18,6 +21,9 @@ public class EmployeeServices implements EmployeeServicesInterface {
 	 EmployeeDatabaseInterface empDB;
 
 	// You are just initializing an object that refers to the methods in the EmployeeArray class
+
+	// The file reading has to be handled by the Services or the Util class, but there is no way
+	// that the DAO class handles those operations, it is strictly bound to handle only CRUD operations
 
 	public EmployeeServices()
 	{
@@ -203,9 +209,9 @@ public class EmployeeServices implements EmployeeServicesInterface {
 
     //Methods to access the Database DAO class
 	@Override
-	public ArrayList<Employee> displayEmployeesDB()
+	public List<Employee> displayEmployeesDB()
 	{
-		ArrayList<Employee> tempArr = null;
+		List<Employee> tempArr = null;
 		try {
 			tempArr = empDB.displayEmployeesDB();
 		} catch (Exception e) {
@@ -250,9 +256,33 @@ public class EmployeeServices implements EmployeeServicesInterface {
 	}
 
 	@Override
-	public ArrayList<Employee> sortEmployeesDB(String column)
+	public List<Employee> sortEmployeesDB(String column)
 	{
-		ArrayList<Employee> tempArr = empDB.sortDataDB(column);
-		return tempArr;
+		List<Employee> tempArrEmp = empDB.sortDataDB(column);
+        Stream<Employee> tempArr= tempArrEmp.stream();
+
+		int sortval = 0;
+		if(sortval == 1)
+		{
+            tempArrEmp = tempArr.sorted((o1, o2) -> Integer.compare(o1.geteSalary(), o2.geteSalary()))
+                                        .collect(Collectors.toList());
+		}
+		if(sortval == 2)
+        {
+            tempArrEmp = tempArr.sorted((o1, o2) -> o1.geteName().compareToIgnoreCase(o2.geteName()))
+                    	.sorted((o1, o2) -> o1.geteName().compareToIgnoreCase(o2.geteName()))
+                    	.collect(Collectors.toList());
+        }
+        if(sortval == 3)
+		{
+			tempArrEmp = tempArr.sorted((o1,o2) -> Integer.compare(o1.getDno() , o2.getDno()))
+						.collect(Collectors.toList());
+		}
+        if(sortval == 4)
+        {
+            tempArrEmp = tempArr.sorted((o1, o2) -> Integer.compare(o1.getEin(), o2.getEin()))
+                    	.collect(Collectors.toList());
+        }
+		return tempArrEmp;
 	}
 }
