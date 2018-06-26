@@ -5,6 +5,7 @@ import Employee_Initial.CommonFiles.EmployeeUtil;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class EmployeeArrayCollections implements EmployeeArrayCollectionsInterface
 {
@@ -137,6 +138,42 @@ public class EmployeeArrayCollections implements EmployeeArrayCollectionsInterfa
 			{
 				e.printStackTrace();
 			}
+		}
+	}
+
+	public class HighSalaryIterator implements Iterator<Employee>
+	{
+		private ArrayList<Employee> tempEmpArr = getEmpArrList();
+		int tempSalary = 0;
+
+		public HighSalaryIterator(int empSalary)
+		{
+			Iterator itr = tempEmpArr.iterator();
+			tempSalary = empSalary;
+		}
+
+		@Override
+		public boolean hasNext() {
+			if(tempEmpArr.isEmpty())
+			{
+				return false;
+			}
+			return true;
+		}
+
+		@Override
+		public Employee next()
+		{
+			if(!hasNext())
+			{
+				return null;
+			}
+			Employee emp = null;
+			for(emp : tempEmpArr)
+				if (emp.geteSalary() >= tempSalary) {
+					return emp;
+				}
+			return emp;
 		}
 	}
 }
