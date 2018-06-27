@@ -10,37 +10,11 @@ import java.util.ArrayList;
 
 public class EmployeeDatabase implements EmployeeDatabaseInterface {
 
-    public EmployeeDatabase()
-    {
-            ArrayList<Employee> tempArrHolder = null;
-            String filePath = EmployeeUtil.getFilePath();
-            String line = "";
-            String splitBy = ", ";
-
-            boolean check = EmployeeUtil.checkFileExists(filePath);
-            if(check == true) {
-                try {
-                    BufferedReader breader = new BufferedReader(new FileReader(filePath));
-                    int i = 0;
-                    Employee emp;
-                    while ((line = breader.readLine()) != null) {
-                        String[] tempvalues = line.split(splitBy);
-                        emp = EmployeeUtil.init_Employee(Integer.parseInt(tempvalues[0]), tempvalues[1], Integer.parseInt(tempvalues[2]), Integer.parseInt(tempvalues[3]));
-                        initinsertEmployeeDb(emp);
-                        i++;
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            }
-
-    }
-    
+    ArrayList<Employee> empArrayDB = new ArrayList<>();
     //Method to display all the employees in the Database
     @Override
     public ArrayList<Employee> displayEmployeesDB() throws Exception
     {
-        ArrayList<Employee> empArrayDB = new ArrayList<>();
         try
         {
             boolean checkval;
@@ -56,7 +30,7 @@ public class EmployeeDatabase implements EmployeeDatabaseInterface {
                 EmployeeList(empArrayDB, rs);
                 con.close();
             }
-
+            return empArrayDB;
         }
         catch(Exception e)
         {
@@ -107,7 +81,7 @@ public class EmployeeDatabase implements EmployeeDatabaseInterface {
 
     //Method to insert into db
     @Override
-    public void insertEmployeeDb(int empid) throws Exception
+    public void updateEmployeeDb(int empid) throws Exception
     {
         boolean checkval;
         String filePath = EmployeeUtil.getFilePathDB();
@@ -122,7 +96,8 @@ public class EmployeeDatabase implements EmployeeDatabaseInterface {
         }
     }
 
-    private void initinsertEmployeeDb(Employee emp) throws Exception
+    @Override
+    public void initinsertEmployeeDb(Employee emp) throws Exception
     {
         boolean checkval;
         cleanInsertDB(emp);

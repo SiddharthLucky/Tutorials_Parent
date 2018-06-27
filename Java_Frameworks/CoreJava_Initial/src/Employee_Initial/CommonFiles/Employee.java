@@ -1,6 +1,6 @@
 package Employee_Initial.CommonFiles;
 
-public class Employee implements Comparable<Employee>
+public class Employee
 {
 	private int ein;
 	private String eName;
@@ -160,35 +160,4 @@ public class Employee implements Comparable<Employee>
 			return false;
 		return true;
 	}
-
-    @Override
-    public int compareTo(Employee emp2)
-    {
-        if(this.geteSalary() > emp2.geteSalary())
-        {
-            return 1;
-        }
-        if(this.geteSalary() == emp2.geteSalary())
-        {
-            return 0;
-        }
-        else
-        {
-            return -1;
-        }
-    }
-
-    private static class employeeSalaryCompare
-    {
-        int empCompare(Employee emp2)
-        {
-            return this.empCompare(emp2);
-
-        }
-    }
-
-    private static class employeeDepartmentCompare
-    {
-
-    }
 }

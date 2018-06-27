@@ -26,8 +26,8 @@ public class EmployeeArrayCollections implements EmployeeArrayCollectionsInterfa
 		String filePath = EmployeeUtil.getFilePath();
 		String line = "";
 		String splitBy = ", ";
-		
-		try 
+
+		try
 		{
 			BufferedReader breader = new BufferedReader(new FileReader(filePath));
 			int i = 0;
@@ -45,7 +45,7 @@ public class EmployeeArrayCollections implements EmployeeArrayCollectionsInterfa
 		{
 			e.printStackTrace();
 		}
-		
+
 		setEmpArrList(tempArrHolder);
 	}
 	
@@ -138,42 +138,6 @@ public class EmployeeArrayCollections implements EmployeeArrayCollectionsInterfa
 			{
 				e.printStackTrace();
 			}
-		}
-	}
-
-	public class HighSalaryIterator implements Iterator<Employee>
-	{
-		private ArrayList<Employee> tempEmpArr = getEmpArrList();
-		int tempSalary = 0;
-
-		public HighSalaryIterator(int empSalary)
-		{
-			Iterator itr = tempEmpArr.iterator();
-			tempSalary = empSalary;
-		}
-
-		@Override
-		public boolean hasNext() {
-			if(tempEmpArr.isEmpty())
-			{
-				return false;
-			}
-			return true;
-		}
-
-		@Override
-		public Employee next()
-		{
-			if(!hasNext())
-			{
-				return null;
-			}
-			Employee emp = null;
-			for(emp : tempEmpArr)
-				if (emp.geteSalary() >= tempSalary) {
-					return emp;
-				}
-			return emp;
 		}
 	}
 }

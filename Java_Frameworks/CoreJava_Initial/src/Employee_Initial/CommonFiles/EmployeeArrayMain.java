@@ -1,6 +1,11 @@
-package Employee_Initial.Arrays;
+package Employee_Initial.CommonFiles;
 
+import Employee_Initial.Arrays.EmployeeServices;
+import Employee_Initial.Arrays.EmployeeServicesInterface;
+import Employee_Initial.Collections.EmployeeServices_Collections;
 import Employee_Initial.CommonFiles.*;
+import Employee_Initial.DatabaseUse.EmployeeServices_Database;
+import Employee_Initial.DatabaseUse.EmployeeThreads;
 
 import java.util.InputMismatchException;
 import java.util.List;
@@ -11,7 +16,24 @@ public class EmployeeArrayMain {
     public static void main(String[] args) {
         int uopt = 0;
         //Always use the interface on the deceleration side and the class implements it on the right
+
+        String path1 = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\EmployeeData.csv";
+        String path2 = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\EmployeeData2.csv";
+        String path3 = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\EmployeeData3.csv";
+
+
+        Thread t1 = new Thread(new EmployeeThreads(path1));
+        Thread t2 = new Thread(new EmployeeThreads(path2));
+        Thread t3 = new Thread(new EmployeeThreads(path3));
+
+        t1.start();
+        t2.start();
+        t3.start();
+
         EmployeeServicesInterface empArrayobj = new EmployeeServices();
+        EmployeeServicesInterface empArrayobj2 = new EmployeeServices_Collections();
+        EmployeeServicesInterface empArrayobj3 = new EmployeeServices_Database();
+
         while (true) {
             try {
                 uopt = displayMenu();
@@ -24,7 +46,7 @@ public class EmployeeArrayMain {
                 case 1:
                     try {
                         empArrayobj.addEmployee();
-                        empArrayobj.insertEmployeeDb(1);
+                        empArrayobj3.insertEmployeeDb();
                         System.out.println("Employee information added.\n");
                     } catch (customExceptions e) {
                         System.out.println(e.toString());
@@ -71,16 +93,18 @@ public class EmployeeArrayMain {
                 case 5:
                     Employee[] empArrMain1 = empArrayobj.dispEmployee();
                     System.out.println("Displaying values from Arrays");
-                    for (int i = 0; i < empArrMain1.length; i++) {
-                        if (empArrMain1[i] != null) {
+                    for (int i = 0; i < empArrMain1.length; i++)
+                    {
+                        if (empArrMain1[i] != null)
+                        {
                             System.out.println(empArrMain1[i]);
                         }
-                        List<Employee> tempArr = empArrayobj.displayEmployeesDB();
-                        System.out.println("Displaying values from DB");
-                        for(Employee emp : tempArr)
-                        {
-                            System.out.println(emp.toString());
-                        }
+                    }
+                    List<Employee> tempArr = empArrayobj3.displayEmployeesDB();
+                    System.out.println("Displaying values from DB");
+                    for(Employee emp : tempArr)
+                    {
+                        System.out.println(emp.toString());
                     }
                     break;
 
@@ -107,9 +131,10 @@ public class EmployeeArrayMain {
 
                 case 8:
                     displaySortingMenu();
-                    List<Employee> tempArr = empArrayobj.sortEmployeesDB("ein");
+                    tempArr = empArrayobj.sortEmployeesDB("ein");
                     System.out.println("Printing the sorted list:\n");
-                    for (Employee emp : tempArr) {
+                    for (Employee emp : tempArr)
+                    {
                         System.out.println(emp.toString());
                     }
                     break;

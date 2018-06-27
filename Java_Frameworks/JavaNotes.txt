@@ -105,3 +105,18 @@ teh function in a class only if you need it.
 - You can use System.out::println in a lambda function to directly print the value.
 foreach(System.out::println) is same as foreach(p -> system.out.println(p))
 such are called method references
+
+-------------------- Session 7----------------
+
+Multi Threading, mOstly for batch application
+
+- All threads are executed are maintained in a call Stack, each thread has its own indivisual call Stack
+
+- The Job and the thread implementation can be in the same class file.
+
+- We dont have to call the thread run method directly it will be called internally by the start method. if we run using directly the run()
+it runs as a method and not a thread.
+
+- Look into premptive scheduling and thread priority;
+
+- For a functional Interface, you can use lambda expressions.

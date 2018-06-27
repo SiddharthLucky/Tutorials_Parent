@@ -1,10 +1,9 @@
 package Employee_Initial.CommonFiles;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Properties;
 import java.util.Scanner;
@@ -14,30 +13,30 @@ import java.util.Scanner;
 
 //Method to get users input for all functions
 
-public class EmployeeUtil{
-	
+public class EmployeeUtil {
+
 	Employee emp;
-	
+
+	//-------------Method to get array size for initialization purposes.------------
 	public static int getArrSize() {
 		int totEmp = 0;
 		try {
-			
+
 			// Look at the code carefully, you dont have to declare an array
 
 			System.out.println("Enter the number of Employees you will be working with:");
 			Scanner empc = new Scanner(System.in);
 			totEmp = empc.nextInt();
-			
-		} catch (InputMismatchException|NullPointerException e) 
-		{
+
+		} catch (InputMismatchException | NullPointerException e) {
 			System.out.println("Enter a valid number of employees you will be working with.\n");
 			getArrSize();
 		}
 		return totEmp;
 	}
-	
-	public static Employee collectInfo() throws customExceptions
-	{
+
+	//----------------Method to collect required info from the user--------------------
+	public static Employee collectInfo() throws customExceptions {
 		int ein, esalary, eage;
 		String ename;
 		Scanner uinfo = new Scanner(System.in);
@@ -49,8 +48,7 @@ public class EmployeeUtil{
 		ename = uname.next();
 		System.out.println("Enter Employees Salary: ");
 		esalary = uinfo.nextInt();
-		if(esalary <= 5000)
-		{
+		if (esalary <= 5000) {
 			throw new customExceptions("The employees salary has to be more than 5000");
 		}
 		System.out.println("Enter Employees Age: ");
@@ -59,30 +57,29 @@ public class EmployeeUtil{
 		emp = EmployeeUtil.init_Employee(ein, ename, esalary, eage);
 		return emp;
 	}
-	
-	public static Employee collectInfo_Update(int ein) throws customExceptions
-	{
+
+	//----------------------Method to collect Info from user to update----------------------
+	public static Employee collectInfo_Update(int ein) throws customExceptions {
 		int esalary, eage;
 		String ename;
 		Scanner uinfo = new Scanner(System.in);
 		Scanner uname = new Scanner(System.in);
 		System.out.println("Enter the Employee information:");
 		System.out.println("Enter Employees Name: ");
-		ename = uname.next(); 
+		ename = uname.next();
 		System.out.println("Enter Employees Salary: ");
 		esalary = uinfo.nextInt();
-		if (esalary <= 5000) 
-		{
+		if (esalary <= 5000) {
 			throw new customExceptions("Enter a Salary valye greater than 5000");
-		}	
+		}
 		System.out.println("Enter Employees Age: ");
 		eage = uinfo.nextInt();
 		Employee emp;
 		emp = EmployeeUtil.init_Employee(ein, ename, esalary, eage);
 		return emp;
 	}
-	
-	
+
+	//----------------Initializes Employee and returns an Employee Object---------------------
 	public static Employee init_Employee(int ein, String eName, int eSalary, int eAge) {
 		Employee emp = new Employee();
 		emp.setEin(ein);
@@ -94,7 +91,7 @@ public class EmployeeUtil{
 		return emp;
 	}
 
-	// method to increase salary
+	//----------------Method to increase salary---------------------------
 	public static void inc_Salary(int eSalary) {
 		int incSalary;
 		Employee emp = new Employee();
@@ -105,6 +102,7 @@ public class EmployeeUtil{
 		System.out.println("Increased Salary of Employee with ID: " + emp.geteSalary());
 	}
 
+	//------------------Method to compare Employees Salaries-------------------
 	public static void emp_salCompare(Employee emp1Sal, Employee emp2Sal) {
 		int obj_emp1, obj_emp2;
 
@@ -117,6 +115,7 @@ public class EmployeeUtil{
 			System.out.println("Salary of Employee2 is greater");
 	}
 
+	//---------------------Method to compare Employees Ages---------------------.
 	public static void emp_ageCompare(Employee emp1Age, Employee emp2Age) {
 		int age1, age2;
 		age1 = emp1Age.geteAge();
@@ -130,8 +129,9 @@ public class EmployeeUtil{
 		}
 	}
 
-	public static void emp_updSalary(Employee emp) // Dont have to use emp_ the inference can be made from the class
-													// placement
+	//--------------------Updates an Employees salary-----------------------
+
+	public static void emp_updSalary(Employee emp) // Dont have to use emp_ the inference can be made from the class placement
 	{
 		int salHolder, ageHolder;
 		salHolder = emp.geteSalary();
@@ -155,6 +155,7 @@ public class EmployeeUtil{
 		}
 	}
 
+	//--------------Calculates the employees gross salary-----------------
 	public static float emp_grossSalary(Employee emp) {
 		float emp_baseSalary, da, hra, perc, grossEarning;
 		int emp_Age = emp.geteAge();
@@ -194,46 +195,47 @@ public class EmployeeUtil{
 		}
 	}
 
+	//-------------Method to retrieve department Information basing on ID----------------
+
 	public static void get_Dept(int did) {
 		switch (did) {
-		case 10:
-			System.out.println("Selected Department Sales\n");
-			break;
+			case 10:
+				System.out.println("Selected Department Sales\n");
+				break;
 
-		case 20:
-			System.out.println("Selected Department Purchase\n");
-			break;
+			case 20:
+				System.out.println("Selected Department Purchase\n");
+				break;
 
-		case 30:
-			System.out.println("Selected Department Administration\n");
-			break;
+			case 30:
+				System.out.println("Selected Department Administration\n");
+				break;
 
-		case 40:
-			System.out.println("Selected Department Research");
-			break;
+			case 40:
+				System.out.println("Selected Department Research");
+				break;
 
-		default:
-			System.out.println("Select a valid number\n");
-			break;
+			default:
+				System.out.println("Select a valid number\n");
+				break;
 		}
-		
+
 	}
-	
-	public static String getFilePath()
-	{
+
+	//-------------Method to get file path------------------
+	public static String getFilePath() {
 		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\EmployeeData.csv";
 		return filePath;
 	}
 
-	//Method to store DB file path
-	public static String getFilePathDB()
-	{
+	//-------------Method to store DB file path--------------------
+	public static String getFilePathDB() {
 		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\DatabaseUse\\dbLogin.properties";
 		return filePath;
 	}
-	
-	public static File initfileFromUser()
-	{
+
+	//-----------------Method to Initilize the file specified by the user---------------
+	public static File initfileFromUser() {
 		String filePath = "C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\EmployeeData.csv";
 		File file = new File(filePath);
 		createFile(file);
@@ -241,9 +243,9 @@ public class EmployeeUtil{
 	}
 
 
+	//--------------If a file does not exist, this will create a file basing on the path------------
 	public static void createFile(File file) {
-		if(!file.exists())
-		{
+		if (!file.exists()) {
 			System.out.println("The designated file doesnt exist.");
 			System.out.println("New file is being created");
 			try {
@@ -254,19 +256,21 @@ public class EmployeeUtil{
 		}
 	}
 
-	public static boolean checkFileExists(String filePath)
-	{
+	//------------Method to be used to check if a file exists in the path specified--------------
+	public static boolean checkFileExists(String filePath) {
 		boolean exists = false;
 		File file = new File(filePath);
-		if(file.exists())
-		{
+		if (file.exists()) {
 			exists = true;
 		}
 		return exists;
 	}
 
-	public static Connection initConnection() throws Exception
-	{
+	/* Can be used to Initialize the database connection
+	 *  The connection properties can be taken from the Properties file.
+	 * */
+
+	public static Connection initConnection() throws Exception {
 		Properties props = new Properties();
 		FileInputStream in = new FileInputStream("C:\\Users\\siddh\\Desktop\\IMCS_Parent\\Java_Frameworks\\CoreJava_Initial\\src\\Employee_Initial\\DatabaseUse\\dbLogin.properties");
 		props.load(in);
@@ -274,7 +278,7 @@ public class EmployeeUtil{
 
 		String driver = props.getProperty("jdbc.driver");
 		if (driver != null) {
-			Class.forName(driver) ;
+			Class.forName(driver);
 		}
 
 		String url = props.getProperty("jdbc.url");
@@ -284,6 +288,32 @@ public class EmployeeUtil{
 		Connection con = DriverManager.getConnection(url, username, password);
 		return con;
 	}
+
+	//------------Method to be used to check if a file exists in the path specified--------------
+	public static ArrayList<Employee> readfile(String filePath) {
+		String line = "";
+		String splitBy = ", ";
+		ArrayList<Employee> tempEmpArr = new ArrayList<>();
+
+		boolean check = EmployeeUtil.checkFileExists(filePath);
+		if (check == true)
+		{
+			try {
+				BufferedReader breader = new BufferedReader(new FileReader(filePath));
+				Employee emp;
+				while ((line = breader.readLine()) != null)
+				{
+					String[] tempvalues = line.split(splitBy);
+					emp = EmployeeUtil.init_Employee(Integer.parseInt(tempvalues[0]), tempvalues[1], Integer.parseInt(tempvalues[2]), Integer.parseInt(tempvalues[3]));
+					tempEmpArr.add(emp);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		return tempEmpArr;
+	}
+
 }
 
 
