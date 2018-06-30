@@ -120,3 +120,21 @@ it runs as a method and not a thread.
 - Look into premptive scheduling and thread priority;
 
 - For a functional Interface, you can use lambda expressions.
+
+-------------------- Session 8----------------
+
+- Callable API can be used to return a Future object using generics, determine the return type in a later stage.
+
+- Executor service is used for thread pooling, fixed no of threads created, to run assigned jobs - Read more information from Jenkov, concurrent executor service.
+
+- Blocking queue can be used to restrict pushing into the queue when it reaches a specified size.
+
+- If you dont specify a type, it takes in any kind of value
+
+ex - mylist<int> sets integer values , myList<String> sets string values, myList = new myList accepts datatypes of anyking
+
+- Wildcard Boundries - You can specify boundries to generics by using (generic name) extends Class Name or Interface Name. Helps you access inner methods of the types.
+
+- When u have a debug pointer, you can use step into in the debug to see which implementation it is going to, also you can use Ctrl + T to navigate to the method being used.
+
+- Reflections, will give u an ability to modify data at runtime, construct object at runtime.
