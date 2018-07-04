@@ -138,3 +138,11 @@ ex - mylist<int> sets integer values , myList<String> sets string values, myList
 - When u have a debug pointer, you can use step into in the debug to see which implementation it is going to, also you can use Ctrl + T to navigate to the method being used.
 
 - Reflections, will give u an ability to modify data at runtime, construct object at runtime.
+
+----------------------Session 9------------------
+
+- In maven you have to main folder and test folder
+
+main -> java, resources - files that access as resources. If a java file is here it will not be compiled by the compiler.
+
+test -> can have all the test cases of the project. Not included in the final build.

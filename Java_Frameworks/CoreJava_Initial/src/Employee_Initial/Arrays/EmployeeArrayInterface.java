@@ -2,15 +2,15 @@ package Employee_Initial.Arrays;
 
 import Employee_Initial.CommonFiles.Employee;
 
-public interface EmployeeArrayInterface
+public interface EmployeeArrayInterface <EA extends EmployeeBaseType>
 {
-	public Employee[] getEmpArr();
-	public void setEmpArr(Employee[] emp);
-	public void addEmp(Employee emp);
-	public void updateEmp(int empid, Employee emp);
+	public EA[] getEmpArr();
+	public void setEmpArr(EA[] emp);
+	public void addEmp(EA emp);
+	public void updateEmp(int empid, EA emp);
 	public void deleteEmployee(int empid);
-	public Employee dispEmpID(int empID);
-	public Employee[] dispEmp();
+	public EA dispEmpID(int empID);
+	public EA[] dispEmp();
 	public void readFromFile() throws Exception;
 	public void saveToFile();
 }

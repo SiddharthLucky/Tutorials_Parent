@@ -1,6 +1,8 @@
 package Employee_Initial.CommonFiles;
 
-public class Employee
+import Employee_Initial.Arrays.EmployeeBaseType;
+
+public class Employee extends EmployeeBaseType
 {
 	private int ein;
 	private String eName;

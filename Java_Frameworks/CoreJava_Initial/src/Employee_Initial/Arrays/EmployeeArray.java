@@ -5,30 +5,31 @@ import Employee_Initial.CommonFiles.EmployeeUtil;
 
 import java.io.*;
 
-public class EmployeeArray implements EmployeeArrayInterface
+public class EmployeeArray <EA extends EmployeeBaseType>  implements EmployeeArrayInterface <EA>
 {
-	private Employee[] empArr;
+	private EA[] empArr;
 
 	@Override
-	public Employee[] getEmpArr() {
+	public EA[] getEmpArr() {
 		return empArr;
 	}
 
 	@Override
-	public void setEmpArr(Employee[] empArr) {
+	public void setEmpArr(EA[] empArr)
+	{
 		this.empArr = empArr;
 	}
 
 	//Default constructor initializes the array value
 	public EmployeeArray(int empArrsize) {
-		empArr = new Employee[empArrsize];
+		empArr = (EA[]) new EmployeeBaseType[empArrsize];
 	}
 	
 	//Constructor is called when a file is passed as a parameter
 	@Override
 	public void readFromFile() throws Exception
 	{
-		Employee[] tempArrHolder = getEmpArr();
+		EA[] tempArrHolder = getEmpArr();
 		String filePath = EmployeeUtil.getFilePath();
 		String line = "";
 		String splitBy = ", ";
@@ -42,7 +43,7 @@ public class EmployeeArray implements EmployeeArrayInterface
 			{
 				String[] tempvalues = line.split(splitBy);
 				emp = EmployeeUtil.init_Employee(Integer.parseInt(tempvalues[0]), tempvalues[1], Integer.parseInt(tempvalues[2]), Integer.parseInt(tempvalues[3]));
-				tempArrHolder[i] = emp;
+				tempArrHolder[i] = (EA) emp;
 				i++;
 			}
 			System.out.println("Retrieved data from file.");
@@ -55,22 +56,22 @@ public class EmployeeArray implements EmployeeArrayInterface
 		setEmpArr(tempArrHolder);
 	}
 	
-	private Employee parseLine(String line)
+	private EA parseLine(String line)
 	{
 		String[] tokens = line.split(",");
 		Employee emp = EmployeeUtil.init_Employee(Integer.parseInt(tokens[0]), tokens[1], Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]));
-		return emp;
+		return (EA) emp;
 	}
 
 	// Method to display all the employees
 		@Override
-		public Employee[] dispEmp() {
-			Employee[] tempArrHolder = getEmpArr();
+		public EA[] dispEmp() {
+			EA[] tempArrHolder = getEmpArr();
 			Employee tempval;
 			for (int i = 0; i < tempArrHolder.length; i++) {
 				if (tempArrHolder[i] != null) {
-					tempval = tempArrHolder[i];
-					tempArrHolder[i] = tempval;
+					tempval = (Employee) tempArrHolder[i];
+					tempArrHolder[i] = (EA) tempval;
 				}
 			}
 			setEmpArr(tempArrHolder);
@@ -79,15 +80,15 @@ public class EmployeeArray implements EmployeeArrayInterface
 		
 		// Method to display employee by ID
 		@Override
-		public Employee dispEmpID(int empID) {
-			Employee tempObjHolder = null;
-			Employee[] tempArrHolder = getEmpArr();
+		public EA dispEmpID(int empID) {
+			EA tempObjHolder = null;
+			EA[] tempArrHolder = getEmpArr();
 			boolean flag = false;
 			for (int i = 0; i < tempArrHolder.length; i++) {
 				if (tempArrHolder[i] != null && flag == false) {
 					tempObjHolder = tempArrHolder[i];
 				}
-				if (tempObjHolder.getEin() == empID && flag == false) {
+				if (((Employee)tempObjHolder).getEin() == empID && flag == false) {
 					tempObjHolder = tempArrHolder[i];
 					flag = true;
 				}
@@ -98,14 +99,14 @@ public class EmployeeArray implements EmployeeArrayInterface
 		// Method to delete an employee and adjust the array
 		@Override
 		public void deleteEmployee(int empid) {
-			Employee[] tempArrHolder;
+			EA[] tempArrHolder;
 			tempArrHolder = getEmpArr();
 			Employee tempObjHolder = null;
 			int indexHolder = 0;
 			boolean flag = false;
 			for (int i = 0; i < tempArrHolder.length; i++) {
 				if (tempArrHolder[i] != null) {
-					tempObjHolder = tempArrHolder[i];
+					tempObjHolder = (Employee) tempArrHolder[i];
 				}
 				if (tempObjHolder.getEin() == empid && flag == false) {
 					tempArrHolder[i] = null;
@@ -113,7 +114,7 @@ public class EmployeeArray implements EmployeeArrayInterface
 					flag = true;
 				}
 			}
-			tempArrHolder = adjArray(tempArrHolder, indexHolder);
+			tempArrHolder = (EA[]) adjArray((Employee[]) tempArrHolder, indexHolder);
 			setEmpArr(tempArrHolder);
 		}
 		
@@ -133,16 +134,16 @@ public class EmployeeArray implements EmployeeArrayInterface
 		
 		// Method to update the array values
 		@Override
-		public void updateEmp(int empid, Employee emp) {
+		public void updateEmp(int empid, EA emp) {
 			// Isolating the employee obj with relevant information
-			Employee[] tempArrHolder = getEmpArr();
-			Employee tempHolder = null;
+			EA[] tempArrHolder = getEmpArr();
+			EA tempHolder = null;
 			boolean flag = true;
 			for (int i = 0; i < tempArrHolder.length; i++) {
 				if (tempArrHolder[i] != null) {
-					tempHolder = tempArrHolder[i];
+					tempHolder = (EA) tempArrHolder[i];
 				}
-				if (tempHolder.getEin() == empid && flag == true) {
+				if (((Employee)tempHolder).getEin() == empid && flag == true) {
 					tempArrHolder[i] = emp;
 					flag = false;
 				}
@@ -152,7 +153,7 @@ public class EmployeeArray implements EmployeeArrayInterface
 		
 		private int getnextEmptyIndex() {
 			int emptyval = 0;
-			Employee[] tempArrHolder = empArr;
+			EA[] tempArrHolder = empArr;
 			boolean flag = false;
 			for (int i = 0; i < tempArrHolder.length; i++) {
 				if (tempArrHolder[i] == null && flag == false) {
@@ -168,19 +169,19 @@ public class EmployeeArray implements EmployeeArrayInterface
 
 		// Method to add employees
 		@Override
-		public void addEmp(Employee emp) {
-			Employee[] tempArrHolder = getEmpArr();
+		public void addEmp(EA emp) {
+			EA[] tempArrHolder = getEmpArr();
 			int indexHolder = getnextEmptyIndex();
 
 			tempArrHolder[indexHolder] = emp;
 			setEmpArr(tempArrHolder);
 		}
 		
-		//COnnect this method to read from the file in the constructor		
+		//Connect this method to read from the file in the constructor
 		@Override
 		public void saveToFile()
 		{
-			Employee[] tempArrHolder = getEmpArr();
+			EA[] tempArrHolder = getEmpArr();
 			Employee emp;
 			File file = EmployeeUtil.initfileFromUser();
 			if(file.exists())
@@ -193,7 +194,7 @@ public class EmployeeArray implements EmployeeArrayInterface
 					{
 						if(tempArrHolder[i] != null)
 						{
-							emp = tempArrHolder[i];
+							emp = (Employee) tempArrHolder[i];
 							empContainer = ""+emp.getEin()+", "+emp.geteName()+", "+ emp.geteSalary()+", "+emp.geteAge()+", "+emp.geteAge()+", "+emp.geteCompany();
 							buffWrite.write(empContainer);
 							buffWrite.newLine();

@@ -6,6 +6,7 @@ import Employee_Initial.Collections.EmployeeServices_Collections;
 import Employee_Initial.CommonFiles.*;
 import Employee_Initial.DatabaseUse.EmployeeServices_Database;
 import Employee_Initial.DatabaseUse.EmployeeThreads;
+import Employee_Initial.Employee_Generics.EmployeeServices_Generics;
 
 import java.util.InputMismatchException;
 import java.util.List;
@@ -33,6 +34,7 @@ public class EmployeeArrayMain {
         EmployeeServicesInterface empArrayobj = new EmployeeServices();
         EmployeeServicesInterface empArrayobj2 = new EmployeeServices_Collections();
         EmployeeServicesInterface empArrayobj3 = new EmployeeServices_Database();
+        EmployeeServicesInterface empArrayobj4 = new EmployeeServices_Generics();
 
         while (true) {
             try {
@@ -47,6 +49,8 @@ public class EmployeeArrayMain {
                     try {
                         empArrayobj.addEmployee();
                         empArrayobj3.insertEmployeeDb();
+                        System.out.println("Values from Generics");
+                        empArrayobj4.insertEmployeeDb();
                         System.out.println("Employee information added.\n");
                     } catch (customExceptions e) {
                         System.out.println(e.toString());
@@ -84,14 +88,15 @@ public class EmployeeArrayMain {
                     System.out.println("\nEnter the EmployeeID to search for: ");
                     Scanner uid = new Scanner(System.in);
                     tempidHolder4 = uid.nextInt();
-                    Employee foundID1, foundID2;
-                    foundID1 = empArrayobj.dispEmployeeID(tempidHolder4);
-                    foundID2 = empArrayobj.displaybyIDfromDB(tempidHolder4);
+                    Employee foundID1, foundID2, foundID3;
+                    foundID1 = (Employee) empArrayobj.dispEmployeeID(tempidHolder4);
+                    foundID2 = (Employee) empArrayobj.displaybyIDfromDB(tempidHolder4);
+                    foundID3 = (Employee) ((EmployeeServices_Generics) empArrayobj4).displaybyIDfromDB(tempidHolder4);
                     System.out.println("\nFound1: " + foundID1 + "\n"+"\nFound2: " + foundID2 + "\n");
                     break;
 
                 case 5:
-                    Employee[] empArrMain1 = empArrayobj.dispEmployee();
+                    Employee[] empArrMain1 = (Employee[]) empArrayobj.dispEmployee();
                     System.out.println("Displaying values from Arrays");
                     for (int i = 0; i < empArrMain1.length; i++)
                     {
@@ -102,6 +107,8 @@ public class EmployeeArrayMain {
                     }
                     List<Employee> tempArr = empArrayobj3.displayEmployeesDB();
                     System.out.println("Displaying values from DB");
+                    System.out.println("Reassigning the values form Generics");
+                    tempArr = empArrayobj4.displayEmployeesDB();
                     for(Employee emp : tempArr)
                     {
                         System.out.println(emp.toString());
@@ -132,6 +139,8 @@ public class EmployeeArrayMain {
                 case 8:
                     displaySortingMenu();
                     tempArr = empArrayobj.sortEmployeesDB("ein");
+                    System.out.println("Sorting from values in DB, Generics");
+                    tempArr = empArrayobj4.sortEmployeesDB("ein");
                     System.out.println("Printing the sorted list:\n");
                     for (Employee emp : tempArr)
                     {

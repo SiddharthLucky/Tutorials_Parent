@@ -6,7 +6,7 @@ import Employee_Initial.CommonFiles.customExceptions;
 
 //-------------------- This class contains Service methods for Employee Array Packages--------------------
 
-public class EmployeeServices implements EmployeeServicesInterface {
+public class EmployeeServices <ES extends EmployeeBaseType> implements EmployeeServicesInterface <ES>{
 
 	EmployeeArrayInterface empArrVal;
 
@@ -30,7 +30,7 @@ public class EmployeeServices implements EmployeeServicesInterface {
 	@Override
 	public void addEmployee() throws customExceptions
 	{
-		Employee emp = EmployeeUtil.collectInfo();
+		ES emp = (ES) EmployeeUtil.collectInfo();
 		if(emp == null)
 			throw new customExceptions("Adding employee failed");
 		empArrVal.addEmp(emp);
@@ -47,8 +47,8 @@ public class EmployeeServices implements EmployeeServicesInterface {
 	@Override
 	public void updateEmployee(int empid) throws customExceptions
 	{
-		Employee emp;
-		emp = EmployeeUtil.collectInfo_Update(empid);
+		ES emp;
+		emp = (ES) EmployeeUtil.collectInfo_Update(empid);
 		if (emp == null)
 			throw new customExceptions("Updtaing employee failed");
 		empArrVal.updateEmp(empid, emp);
@@ -56,29 +56,29 @@ public class EmployeeServices implements EmployeeServicesInterface {
 
 	//Display Employees list by ID
 	@Override
-	public Employee dispEmployeeID(int empid)
+	public ES dispEmployeeID(int empid)
 	{
-		Employee emp = empArrVal.dispEmpID(empid);
-		return emp;
+		ES emp = (ES) empArrVal.dispEmpID(empid);
+		return (ES) emp;
 	}
 	
 	//Display all Employees
 	@Override
-	public Employee[] dispEmployee()
+	public ES[] dispEmployee()
 	{
-		return empArrVal.dispEmp();
+		return (ES[]) empArrVal.dispEmp();
 	}
 	
 	//Get hRA based on empployee id
 	@Override
 	public float getHRAbyID(int empid) {
-		Employee[] tempArrHolder = empArrVal.getEmpArr(); 
+		ES[] tempArrHolder = (ES[]) empArrVal.getEmpArr();
 		Employee tempObjHolder = null;
 		float hra = 0;
 		boolean flag = true;
 		for (int i = 0; i < tempArrHolder.length; i++) {
 			if (tempArrHolder[i] != null) {
-				tempObjHolder = tempArrHolder[i];
+				tempObjHolder = (Employee) tempArrHolder[i];
 			}
 			if (tempObjHolder.getEin() == empid && flag) {
 				hra = tempObjHolder.HRA();
@@ -93,16 +93,16 @@ public class EmployeeServices implements EmployeeServicesInterface {
 	//Get gross salary based on employee id
 	@Override
 	public float grossSalaryByID(int empid) {
-		Employee tempObjHolder = null;
-		Employee[] tempArrHolder = empArrVal.getEmpArr(); 
+		ES tempObjHolder = null;
+		ES[] tempArrHolder = (ES[]) empArrVal.getEmpArr();
 		float grossSalary = 0;
 		boolean flag = true;
 		for (int i = 0; i < tempArrHolder.length; i++) {
 			if (tempArrHolder[i] != null) {
 				tempObjHolder = tempArrHolder[i];
 			}
-			if (tempObjHolder.getEin() == empid && flag)  {
-				grossSalary = EmployeeUtil.emp_grossSalary(tempObjHolder);
+			if (((Employee)tempObjHolder).getEin() == empid && flag)  {
+				grossSalary = EmployeeUtil.emp_grossSalary((Employee) tempObjHolder);
 				flag = false;
 			}
 		}

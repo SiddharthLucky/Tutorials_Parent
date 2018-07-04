@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="javax.swing.plaf.synth.SynthSeparatorUI"/>
 <fullyQualifiedTypeName name="Employee_Initial.Employee.Department"/>
 <fullyQualifiedTypeName name="java.awt.DisplayMode"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
@@ -60,4 +59,5 @@
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="Employee_Initial.EmployeeUtil"/>
 <fullyQualifiedTypeName name="Employee_Initial.CommonFiles.EmployeeUtil"/>
+<fullyQualifiedTypeName name="Hello_Test"/>
 </qualifiedTypeNameHistroy>
