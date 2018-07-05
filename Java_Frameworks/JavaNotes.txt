@@ -89,7 +89,7 @@ to be released.
 - Advantages of using prepared statement is you can avoid SQL injection.
 
 
-------------------- Session 6---------------
+------------------- Session 6 - DAO Pattern---------------
 
 - The DAO class can only contain strictly CRUD operations, rest of all 
 operations can be handled by services class.
@@ -106,7 +106,7 @@ teh function in a class only if you need it.
 foreach(System.out::println) is same as foreach(p -> system.out.println(p))
 such are called method references
 
--------------------- Session 7----------------
+-------------------- Session 7 - Multi Threading----------------
 
 Multi Threading, mOstly for batch application
 
@@ -121,7 +121,7 @@ it runs as a method and not a thread.
 
 - For a functional Interface, you can use lambda expressions.
 
--------------------- Session 8----------------
+-------------------- Session 8 - Generics & Wildcards----------------
 
 - Callable API can be used to return a Future object using generics, determine the return type in a later stage.
 
@@ -139,10 +139,53 @@ ex - mylist<int> sets integer values , myList<String> sets string values, myList
 
 - Reflections, will give u an ability to modify data at runtime, construct object at runtime.
 
-----------------------Session 9------------------
+----------------------Session 9 - Maven------------------
 
 - In maven you have to main folder and test folder
 
 main -> java, resources - files that access as resources. If a java file is here it will not be compiled by the compiler.
 
 test -> can have all the test cases of the project. Not included in the final build.
+
+- pon is necessary for building, unique information should be specified called GAV
+
+- Group, Artifact, Version ID .Optionally you can also use plugins into maven.
+
+- SNAPSHOT - means still app is in developement state, can be changed to RELEASE.
+
+- Packaging can be used to tell if you want to generate a jar or a var file.
+
+- If v is mission in dependency, the version is inherited from the parent tags
+you can also have nested dependecy tags.
+
+- Changing version in one place changes in all o fthe files.
+
+- default name is same as artifact name = if not defined.
+
+- The plugins can be added geenrally to the build part.
+
+- main files part of maven are src and pom
+
+- The local repo is where maven downlaods all the required dependencies - should be stored
+in the users file.
+
+- In the repo, there is a .settings file which contains all the creds to the various servers
+- good practice to maintain various settings file so that it can be user specific.
+
+- After compilation all the files will be present in the target file.
+
+- mvn clean can be used to erase the target directory.
+
+- For test cases to run you can use mvn test
+
+- For creating the jar file you can use mvn package.
+
+- mvn install moves the files to the repository.
+
+
+- Commands to be used -
+1. mvn compile
+2. mvn test
+3. mvn package
+4. mvn install 
+List of plugins:
