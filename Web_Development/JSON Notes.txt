@@ -1,0 +1,22 @@
+
+------------- Session 1----------------
+
+- JSON - JavaScript Object Notation.
+
+- Jackson in java can be used to map objects to java JSON
+
+- ObjecMapper.configure(SerializationFile.indent, )
+
+- JSON type ------ Java Type
+	
+	object			LinkedHashMap<String, Object>
+	array
+	
+	
+- What an xml contains is called an xsd - schema defenition for xml.
+
+- jax-b can be used to parse xml data files. - support is better and its being used from a long time to marshall and unmarshall xml.
+
+- pom plugin called ---- jaxb plugin - can perform xml java compiler to convert the types in xml to java classes.
+
+- Error at root element, you can use the @xmlRootElement to access teh element as a root element.
