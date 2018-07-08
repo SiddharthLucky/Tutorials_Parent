@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Master" xmlns:tns="http://www.example.org/Master" elementFormDefault="qualified">
+
+
+
+    <complexType name="Customer">
+    	<sequence>
+    		<element name="customerId" type="int"></element>
+    		<element name="Name" type="string"></element>
+    		<element name="DOB" type="date"></element>
+    		<element name="annualSalary" type="int"></element>
+    		<element name="address" type="string"></element>
+    		<element name="paymentType" type="tns:PaymentType" maxOccurs="2" minOccurs="1"></element>
+    	</sequence>
+    </complexType>
+
+
+    <complexType name="PaymentType">
+    	<sequence>
+    		<element name="cardNumber" type="string"></element>
+    		<element name="cardName" type="string"></element>
+    		<element name="dateFrom" type="date"></element>
+    		<element name="cardType" type="string"></element>
+    	</sequence>
+    </complexType>
+
+
+    <element name="Customer" type="tns:Customer"></element>
+</schema>
