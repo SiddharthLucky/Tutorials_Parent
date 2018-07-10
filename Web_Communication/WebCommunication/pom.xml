@@ -24,7 +24,7 @@
 						<source>${basedir}/src/main/resources/Master.xsd</source>
 					</sources>
 					<!-- The package in which the source files will be generated. -->
-					<packageName>java.jaxb.Customer</packageName>
+					<packageName>sid.com.Customer</packageName>
 					<!-- The working directory to create the generated java source files. -->
 					<outputDirectory>${basedir}/src/main/java</outputDirectory>
 				</configuration>

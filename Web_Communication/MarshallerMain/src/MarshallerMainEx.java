@@ -1,5 +1,6 @@
 import java.io.File;
-import java.jaxb.Customer.Customer;
+import sid.com.Customer.*;
+
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -11,12 +12,12 @@ public class MarshallerMainEx
 	{
 		try 
 		{    
-            File file = new File("employee.xml");    
+            File file = new File("customer.xml");
             JAXBContext jaxbContext = JAXBContext.newInstance(Customer.class);    
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();    
             Customer c=(Customer) jaxbUnmarshaller.unmarshal(file);    
             System.out.println(c.getName()+" "+c.getDOB()+" "+c.getPaymentType());          
-          }
+        }
 		catch (JAXBException e) {e.printStackTrace(); }
 	}
 }
